@@ -73,6 +73,9 @@ class SkLearner(AbstractLearner):
     def set_bagging_classifier(self):
         return SkLearner(ensemble.BaggingClassifier(tree.DecisionTreeClassifier()))
 
+    def set_gradient_boosting_classifier(self):
+        return SkLearner(ensemble.GradientBoostingClassifier(n_estimators=100))
+
     def train_classifier(self, dataset):
         self._classifier = self._classifier.fit(dataset.features, dataset.labels)
         return self
