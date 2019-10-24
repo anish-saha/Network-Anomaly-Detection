@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-from sklearn import svm, tree, ensemble, feature_extraction, preprocessing
+from sklearn import linear_model, svm, tree, ensemble, feature_extraction, preprocessing
 from sklearn.metrics import recall_score, precision_score, accuracy_score, roc_auc_score
 from sklearn.model_selection import StratifiedKFold
 
@@ -76,6 +76,9 @@ class SkLearner(AbstractLearner):
     def set_gradient_boosting_classifier(self):
         return SkLearner(ensemble.GradientBoostingClassifier(n_estimators=100))
 
+    def set_logistic_regression_classifier(self):
+        return SkLearner(linear_model.LogisticRegression())
+
     def train_classifier(self, dataset):
         self._classifier = self._classifier.fit(dataset.features, dataset.labels)
         return self
@@ -128,9 +131,9 @@ class SkLearner(AbstractLearner):
             fpr.append(metrics["fpr"])
             tnr.append(metrics["tnr"])
         # return {"auc": np.mean(roc_auc)}
-        # print classification_report(l_test, prediction)
-        # print "Predicted: 0   1"
-        # print confusion_matrix(l_test, prediction)
+        # print(classification_report(l_test, prediction))
+        # print("Predicted: 0   1")
+        # print(confusion_matrix(l_test, prediction))
         return {"auc": np.mean(roc_auc), "recall": np.mean(recall), "precision": np.mean(precision),
                 "accuracy": np.mean(accuracy), "fpr": np.mean(fpr), "tnr": np.mean(tnr)}
 
