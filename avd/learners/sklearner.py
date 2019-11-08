@@ -101,19 +101,25 @@ class SkLearner(AbstractLearner):
             yield train_index, test_index
             # return cross_validation.StratifiedKFold(labels, n_folds)
 
-    def get_classification_metrics(self, l_test, prediction, probas):
+    def get_classification_metrics(self, l_test, prediction, probas, test=False):
         # fpr, tpr, thresholds = roc_curve(l_test, prediction)
         false_positive = float(
             len(np.where(l_test - prediction == -1)[0]))  # 0 (truth) - 1 (prediction) == -1 which is a false positive
         true_negative = float(
             len(np.where(l_test + prediction == 0)[0]))  # 0 (truth) - 0 (prediction) == 0 which is a true positive
-        return {"auc": roc_auc_score(l_test, probas),
+
+        metrics = {
                 "recall": recall_score(l_test, prediction),
                 "precision": precision_score(l_test, prediction),
                 "accuracy": accuracy_score(l_test, prediction),
                 "fpr": false_positive / (true_negative + false_positive),
                 "tnr": true_negative / (true_negative + false_positive)
                 }
+
+        if not test:
+            metrics["auc"] = roc_auc_score(l_test, probas)
+
+        return metrics
 
     def cross_validate(self, dataset, n_folds=10):
         roc_auc, recall, precision, accuracy, fpr, tpr, tnr = [], [], [], [], [], [], []
@@ -123,7 +129,7 @@ class SkLearner(AbstractLearner):
             # prediction = self.train_classifier(DataSet(f_train, l_train)).predict(f_test)
             prediction = self.train_classifier(DataSet(f_train, l_train)).get_prediction(f_test)
             probas = self.train_classifier(DataSet(f_train, l_train)).get_prediction_probabilities(f_test)[:, 1]
-            metrics = self.get_classification_metrics(l_test, prediction, probas)
+            metrics = self.get_classification_metrics(l_test, prediction, probas, False)
             roc_auc.append(metrics["auc"])
             recall.append(metrics["recall"])  # TPR
             precision.append(metrics["precision"])
@@ -141,14 +147,14 @@ class SkLearner(AbstractLearner):
         prediction = self.get_prediction(data)
         probas = self.get_prediction_probabilities(data)[:, 1]
         data.merge_dataset_with_predictions(prediction)
-        return self.get_classification_metrics(data.labels, prediction, probas)
+        return self.get_classification_metrics(data.labels, prediction, probas, True)
 
     def validate_prediction_by_links(self, prediction):
         roc_auc, recall, precision, accuracy, fpr, tpr = [], [], [], [], [], []
 
         try:
             metrics = self.get_classification_metrics(prediction["predicted_label"].values, prediction["actual"].values,
-                                                      prediction["pos probability"].values)
+                                                      prediction["pos probability"].values, False)
             roc_auc.append(metrics["auc"])
             recall.append(metrics["recall"])  # TPR
             precision.append(metrics["precision"])
