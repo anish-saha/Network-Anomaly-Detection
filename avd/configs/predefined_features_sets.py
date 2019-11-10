@@ -6,6 +6,28 @@ link06 = {
     "vertex_u": {"clustering_coefficient_u": "get_clustering_coefficient"}
 
 }
+
+fast_link_features_small = {
+    True: {
+        "link": {
+            "jaccards_coefficient": "get_jaccards_coefficient",
+        },
+        "vertex_v": {
+            "out_degree_v": "get_out_degree",
+            "in_degree_v": "get_in_degree"
+        },
+        "vertex_u": {
+            "out_degree_u": "get_out_degree",
+            "in_degree_u": "get_in_degree",
+        }
+    },
+    False: {
+        "link": {
+            "jaccards_coefficient": "get_jaccards_coefficient",
+        }
+    }
+}
+
 fast_link_features = {
     True: {
         "link": {"jaccards_coefficient": "get_jaccards_coefficient",
