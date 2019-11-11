@@ -1,6 +1,9 @@
 # Ignore python temp files
 *.pyc
 __pycache__/
+.ipynb_checkpoints/
 
 # Ignore data directory
 data/
+temp.csv
+

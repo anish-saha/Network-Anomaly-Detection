@@ -108,7 +108,7 @@ class GraphLearningController:
                                        feature_dict=feature_dict)  # Training the classifier
         self._ml.load_training_set(
             self._train_path, "edge_label", id_col_name, meta_data_cols)
-        self._ml.load_test_set(self._test_path, "edge_label", id_col_name, meta_data_cols)
+        #self._ml.load_test_set(self._test_path, "edge_label", id_col_name, meta_data_cols)
         self._ml = self._ml.train_classifier()
         print("Training 10-fold validation: {}".format(self._ml.k_fold_validation()))
         # Testing the classifier
@@ -144,5 +144,5 @@ class GraphLearningController:
             classified, self._labels_path)
         if isinstance(classified, DataFrame):
             classified.to_csv(results_output_path)
-        print("validate_prediction_by_links:")
-        print(self._ml.validate_prediction_by_links(classified))
+
+        print("Validate_prediction_by_links: {}".format(self._ml.validate_prediction_by_links(classified)))
