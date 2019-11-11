@@ -1,6 +1,8 @@
 from avd.utils.dataset import DataSet
 from avd.utils.exceptions import ValueNotSet
 
+from sklearn.ensemble import IsolationForest
+
 
 class MlController(object):
     def __init__(self, learner):
@@ -158,3 +160,4 @@ class MlController(object):
         avg_prob = self._learner.classify_by_links_probability(probas, features.features_ids, labels_map)
         avg_prob = avg_prob.sort_values("mean_link_label")
         return avg_prob
+    

@@ -4,6 +4,7 @@ import pandas as pd
 from sklearn import linear_model, svm, tree, ensemble, feature_extraction, preprocessing
 from sklearn.metrics import recall_score, precision_score, accuracy_score, roc_auc_score
 from sklearn.model_selection import StratifiedKFold
+from sklearn.ensemble import IsolationForest
 
 from avd.configs.config import *
 from avd.learners import AbstractLearner
@@ -78,6 +79,10 @@ class SkLearner(AbstractLearner):
 
     def set_logistic_regression_classifier(self):
         return SkLearner(linear_model.LogisticRegression())
+    
+    def set_isolation_forest_classifier(self):
+        print("Isolation Forest Set.")
+        return SkLearner(ensemble.IsolationForest(max_samples=100, random_state=42, contamination=0.1))
 
     def train_classifier(self, dataset):
         self._classifier = self._classifier.fit(dataset.features, dataset.labels)
@@ -177,3 +182,4 @@ class SkLearner(AbstractLearner):
         train_df["predicted_label"] = train_df["pos probability"].apply(
             lambda avg: labels["pos"] if avg >= threshold else labels["neg"])
         return train_df
+    

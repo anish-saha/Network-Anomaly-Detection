@@ -31,7 +31,17 @@ class AbstractLearner(object):
         Returns
         -------
         AbstractLearner
-            Learner class object with classifier set as decision tree.
+            Learner class object with classifier set as SVM.
+        """
+        pass
+    
+    def set_isolation_forest_classifier(self):
+        """Set the classifier that should be used as Isolation Forest.
+
+        Returns
+        -------
+        AbstractLearner
+            Learner class object with classifier set as Isolation Forest.
         """
         pass
 
