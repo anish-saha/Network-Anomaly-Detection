@@ -6,7 +6,7 @@ from avd.configs.graph_config import GraphConfig
 from avd.graphs.graph_factory import GraphFactory
 
 
-def load_data(dataset_file_name="twitter.csv.gz", labels_file_name="twitter_fake_ids.csv", labels_map=None, limit=5000000):
+def load_data(dataset_file_name="twitter.csv.gz", labels_file_name="twitter_fake_ids.csv", labels_map=None, limit=5000000): 
     data_path = os.path.join(DATA_DIR, dataset_file_name)
     if not os.path.exists(data_path):
         data_path = download_file(TWITTER_URL, dataset_file_name)

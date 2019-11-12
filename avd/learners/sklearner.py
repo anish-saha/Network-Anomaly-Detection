@@ -81,7 +81,6 @@ class SkLearner(AbstractLearner):
         return SkLearner(linear_model.LogisticRegression())
     
     def set_isolation_forest_classifier(self):
-        print("Isolation Forest Set.")
         return SkLearner(ensemble.IsolationForest(max_samples=100, random_state=42, contamination=0.1))
 
     def train_classifier(self, dataset):
