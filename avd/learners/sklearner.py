@@ -78,8 +78,8 @@ class SkLearner(AbstractLearner):
         return SkLearner(ensemble.GradientBoostingClassifier(n_estimators=100))
 
     def set_logistic_regression_classifier(self):
-        return SkLearner(linear_model.LogisticRegression())
-    
+        return SkLearner(linear_model.LogisticRegression(random_state=0, solver='lbfgs', max_iter=200, multi_class='ovr'))
+
     def set_isolation_forest_classifier(self):
         return SkLearner(ensemble.IsolationForest(max_samples=100, random_state=42, contamination=0.1))
 
@@ -181,4 +181,3 @@ class SkLearner(AbstractLearner):
         train_df["predicted_label"] = train_df["pos probability"].apply(
             lambda avg: labels["pos"] if avg >= threshold else labels["neg"])
         return train_df
-    
