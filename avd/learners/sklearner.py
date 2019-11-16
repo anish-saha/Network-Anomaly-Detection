@@ -141,6 +141,7 @@ class SkLearner(AbstractLearner):
         # print(classification_report(l_test, prediction))
         # print("Predicted: 0   1")
         # print(confusion_matrix(l_test, prediction))
+        print("Cross-validation results:")
         return {"auc": np.mean(roc_auc), "recall": np.mean(recall), "precision": np.mean(precision),
                 "accuracy": np.mean(accuracy), "fpr": np.mean(fpr), "tnr": np.mean(tnr)}
 

@@ -74,16 +74,18 @@ class GraphLearningController:
             training_set, test_set = gs.split_training_test_set(
                 training_size, test_size)
 
-            self.extract_features_for_set(my_graph, test_set, self._test_path, feature_dict[my_graph.is_directed],
-                                          test_size["neg"] + test_size["pos"])
+            print("Extracting features for training set:")
             self.extract_features_for_set(my_graph, training_set, self._train_path, feature_dict[my_graph.is_directed],
                                           training_size["neg"] + training_size["pos"])
+            print("Extracting features for test set:")
+            self.extract_features_for_set(my_graph, test_set, self._test_path, feature_dict[my_graph.is_directed],
+                                          test_size["neg"] + test_size["pos"])
         else:
             print("Existing files were loaded.")
 
     def evaluate_classifier(self, my_graph, test_size=0,
                             training_size=0, id_col_name="src",
-                            feature_dict=fast_link_features,
+                            feature_dict=fast_link_features_small,
                             meta_data_cols=None):
         """Execute the link classifier
 
@@ -150,4 +152,5 @@ class GraphLearningController:
         if isinstance(classified, DataFrame):
             classified.to_csv(results_output_path)
 
+        print("Test results:")
         print("Validate_prediction_by_links: {}".format(self._ml.validate_prediction_by_links(classified)))
