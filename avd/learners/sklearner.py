@@ -71,11 +71,15 @@ class SkLearner(AbstractLearner):
     def set_adaboost_classifier(self):
         return SkLearner(ensemble.AdaBoostClassifier())
 
+    def set_rf_bagging_classifier(self):
+        return SkLearner(ensemble.BaggingClassifier(
+            ensemble.RandomForestClassifier(n_estimators=100, criterion="entropy")))
+
     def set_bagging_classifier(self):
         return SkLearner(ensemble.BaggingClassifier(tree.DecisionTreeClassifier()))
 
     def set_gradient_boosting_classifier(self):
-        return SkLearner(ensemble.GradientBoostingClassifier(n_estimators=100))
+        return SkLearner(ensemble.GradientBoostingClassifier(loss='exponential', n_estimators=100))
 
     def set_logistic_regression_classifier(self):
         return SkLearner(linear_model.LogisticRegression(random_state=0, solver='lbfgs', max_iter=200, multi_class='ovr'))
