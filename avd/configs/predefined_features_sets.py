@@ -122,7 +122,13 @@ fast_link_features_max = {
             "total_friends": "get_total_friends",
             "sum_of_friends": "get_sum_of_friends",
             "adamic_adar_index": "get_adamic_adar_index",
+            "knn_weight1": "get_knn_weight1",
+            "knn_weight2": "get_knn_weight2",
+            "knn_weight3": "get_knn_weight3",
             "knn_weight4": "get_knn_weight4",
+            "knn_weight5": "get_knn_weight5",
+            "knn_weight6": "get_knn_weight6",
+            "knn_weight7": "get_knn_weight7",
             "knn_weight8": "get_knn_weight8"
         },
         "vertex_v": {"out_degree_v": "get_out_degree",
