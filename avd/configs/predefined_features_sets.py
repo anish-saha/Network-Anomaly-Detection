@@ -88,6 +88,50 @@ fast_link_features = {
     }
 }
 
+fast_link_features_max = {
+    True: {
+        "link": {"jaccards_coefficient": "get_jaccards_coefficient",
+                 "preferential_attachment_score": "get_preferential_attachment_score",
+                 "friend_measure": "get_friend_measure",
+                 "number_of_transitive_friends": "get_number_of_transitive_friends",
+                 "is_opposite_direction_friends": "is_opposite_direction_friends",
+                 "in_common_friends": "get_in_common_friends",
+                 "out_common_friends": "get_out_common_friends",
+                 "total_friends": "get_total_friends",
+                 "knn_weight1": "get_knn_weight1",
+                 "knn_weight2": "get_knn_weight2",
+                 "knn_weight3": "get_knn_weight3",
+                 "knn_weight4": "get_knn_weight4",
+                 "knn_weight5": "get_knn_weight5",
+                 "knn_weight6": "get_knn_weight6",
+                 "knn_weight7": "get_knn_weight7",
+                 "knn_weight8": "get_knn_weight8",
+                 "bi_common_friends": "get_bi_common_friends"
+        },
+        "vertex_v": {"out_degree_v": "get_out_degree",
+                     "in_degree_v": "get_in_degree"},
+        "vertex_u": {"out_degree_u": "get_out_degree",
+                     "in_degree_u": "get_in_degree"}
+    },
+    False: {
+        "link": { "jaccards_coefficient": "get_jaccards_coefficient",
+            "common_friends": "get_common_friends",
+            "preferential_attachment_score": "get_preferential_attachment_score",
+            "friend_measure": "get_friend_measure",
+            "alt_friend_measure": "get_alt_friend_measure",
+            "total_friends": "get_total_friends",
+            "sum_of_friends": "get_sum_of_friends",
+            "adamic_adar_index": "get_adamic_adar_index",
+            "knn_weight4": "get_knn_weight4",
+            "knn_weight8": "get_knn_weight8"
+        },
+        "vertex_v": {"out_degree_v": "get_out_degree",
+                     "in_degree_v": "get_in_degree"},
+        "vertex_u": {"out_degree_u": "get_out_degree",
+                     "in_degree_u": "get_in_degree"}
+    }
+}
+
 fast_vertex_features = {
     True: {"vertex_v":
                {"src": "get_vertex",
