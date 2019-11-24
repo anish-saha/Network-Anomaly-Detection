@@ -95,7 +95,7 @@ class GraphSampler(object):
                         yield edge
                 if not vertices_number:
                     break
-                    # self._open_vertices = self._open_vertices.difference(self._closed_vertices)
+        self._open_vertices = self._open_vertices.difference(self._closed_vertices)
 
     def get_random_vertices_by_edges(self, vertices_number, node_label=False, open_vertices=None):
         """
