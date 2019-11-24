@@ -1,0 +1,25 @@
+Results (accuracy):
+========
+
+Feature-set: small
+Logistic Regression Training 	(small)	: 0.7694
+Logistic Regression Test 		(small)	: 0.6600
+Logistic Regression Training 	(large)	: 0.8556
+Logistic Regression Test 		(large)	: 0.6972
+Random Forest Training 			(small)	: 0.8309
+Random Forest Test 				(small)	: 0.7736
+Random Forest Training 			(large)	: 0.8805
+Random Forest Test 				(large)	: 0.8400
+Adaboost Training 				(small)	: 0.8478
+Adaboost Test 					(small)	: 0.8209
+Adaboost Training 				(large)	: 0.8817
+Adaboost Test 					(large)	: 0.8595
+Bagging Training 				(small)	: 0.8180
+Bagging Test 					(small)	: 0.7950
+Bagging Training 				(large)	: 0.8753
+Bagging Test 					(large)	: 0.8623
+Gradient Boosting Training 		(small)	: 0.8385
+Gradient Boosting Test 			(small)	: 0.8009
+Gradient Boosting Training 		(large)	: 0.8888
+Gradient Boosting Test 			(large)	: 0.8627
+
