@@ -29,8 +29,8 @@ glc = GraphLearningController(learner, twitter_config)
 result_path = os.path.join(output_folder, twitter_config.name  + "res.csv")
 glc.classify_by_links(twitter_graph,
                       result_path,
-                      test_size={"neg": 10000, "pos": 1000},
-                      train_size={"neg": 20000, "pos": 20000},
+                      test_size={"neg": 2000, "pos": 200},
+                      train_size={"neg": 5000, "pos": 5000},
                       meta_data_cols=meta_data_cols)
 
 def aggreagate_res(data_folder, res_path):
