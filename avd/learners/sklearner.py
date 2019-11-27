@@ -160,8 +160,8 @@ class SkLearner(AbstractLearner):
 
         try:
             metrics = self.get_classification_metrics( \
-                                        prediction["predicted_label"].values, \
                                         prediction["actual"].values, \
+                                        prediction["predicted_label"].values, \
                                         prediction["pos probability"].values)
             roc_auc.append(metrics["auc"])
             recall.append(metrics["recall"])  # TPR
