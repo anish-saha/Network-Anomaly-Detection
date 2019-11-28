@@ -1,0 +1,82 @@
+Loading labels...
+Loading graph...
+Data loaded.
+75624
+Setting training and test sets
+Extracting features for training set:
+Graph loaded
+100%|███████████████████████████████████████████████████████████████████████████████████| 10000/10000 [01:59<00:00, 83.84feature/s]
+Features were written to: /Users/vhying/Desktop/CS 221/Project/Network-Anomaly-Detection/data/temp/twitter_RandomForest_train.csv
+Extracting features for test set:
+Graph loaded
+70997feature [13:25, 88.09feature/s]
+Features were written to: /Users/vhying/Desktop/CS 221/Project/Network-Anomaly-Detection/data/temp/twitter_RandomForest_test.csv
+Training 10-fold validation: {'accuracy': 0.8957, 'precision': 0.896139659853256, 'recall': 0.8952, 'f1': 0.8956181545834587, 'auc': 0.9590804, 'fpr': 0.1038, 'tnr': 0.8962}
+Validate_prediction_by_links: {'accuracy': 0.8713636363636363, 'precision': 0.10476190476190476, 'recall': 0.055, 'f1': 0.07213114754098361, 'auc': 0.5155637500000001, 'fpr': 0.047}
+Setting training and test sets
+Extracting features for training set:
+Graph loaded
+100%|███████████████████████████████████████████████████████████████████████████████████| 10000/10000 [02:00<00:00, 82.86feature/s]
+Features were written to: /Users/vhying/Desktop/CS 221/Project/Network-Anomaly-Detection/data/temp/twitter_LogisticRegression_train.csv
+Extracting features for test set:
+Graph loaded
+71444feature [14:08, 84.21feature/s]
+Features were written to: /Users/vhying/Desktop/CS 221/Project/Network-Anomaly-Detection/data/temp/twitter_LogisticRegression_test.csv
+Training 10-fold validation: {'accuracy': 0.8956, 'precision': 0.8948531423983945, 'recall': 0.8966, 'f1': 0.8956949216532959, 'auc': 0.9614421999999999, 'fpr': 0.10540000000000001, 'tnr': 0.8946}
+Validate_prediction_by_links: {'accuracy': 0.8704545454545455, 'precision': 0.05263157894736842, 'recall': 0.025, 'f1': 0.03389830508474576, 'auc': 0.49062375, 'fpr': 0.045}
+Setting training and test sets
+Extracting features for training set:
+Graph loaded
+100%|███████████████████████████████████████████████████████████████████████████████████| 10000/10000 [01:57<00:00, 85.09feature/s]
+Features were written to: /Users/vhying/Desktop/CS 221/Project/Network-Anomaly-Detection/data/temp/twitter_Adaboost_train.csv
+Extracting features for test set:
+Graph loaded
+69828feature [12:15, 94.90feature/s]
+Features were written to: /Users/vhying/Desktop/CS 221/Project/Network-Anomaly-Detection/data/temp/twitter_Adaboost_test.csv
+Training 10-fold validation: {'accuracy': 0.8873000000000001, 'precision': 0.8851941918936992, 'recall': 0.8901999999999999, 'f1': 0.8876136114355067, 'auc': 0.9546720000000001, 'fpr': 0.1156, 'tnr': 0.8844}
+Validate_prediction_by_links: {'accuracy': 0.8695454545454545, 'precision': 0.13445378151260504, 'recall': 0.08, 'f1': 0.10031347962382446, 'auc': 0.51050125, 'fpr': 0.0515}
+Setting training and test sets
+Extracting features for training set:
+Graph loaded
+100%|███████████████████████████████████████████████████████████████████████████████████| 10000/10000 [01:56<00:00, 85.91feature/s]
+Features were written to: /Users/vhying/Desktop/CS 221/Project/Network-Anomaly-Detection/data/temp/twitter_Bagging_train.csv
+Extracting features for test set:
+Graph loaded
+72197feature [13:37, 88.29feature/s]
+Features were written to: /Users/vhying/Desktop/CS 221/Project/Network-Anomaly-Detection/data/temp/twitter_Bagging_test.csv
+Training 10-fold validation: {'accuracy': 0.8939, 'precision': 0.8908154777805685, 'recall': 0.8982000000000001, 'f1': 0.8943916081072466, 'auc': 0.9569776000000001, 'fpr': 0.11039999999999998, 'tnr': 0.8896000000000001}
+Validate_prediction_by_links: {'accuracy': 0.8663636363636363, 'precision': 0.12698412698412698, 'recall': 0.08, 'f1': 0.09815950920245399, 'auc': 0.5118274999999999, 'fpr': 0.055}
+Setting training and test sets
+Extracting features for training set:
+Graph loaded
+100%|███████████████████████████████████████████████████████████████████████████████████| 10000/10000 [01:46<00:00, 94.30feature/s]
+Features were written to: /Users/vhying/Desktop/CS 221/Project/Network-Anomaly-Detection/data/temp/twitter_RFBagging_train.csv
+Extracting features for test set:
+Graph loaded
+70737feature [12:15, 96.16feature/s]
+Features were written to: /Users/vhying/Desktop/CS 221/Project/Network-Anomaly-Detection/data/temp/twitter_RFBagging_test.csv
+Training 10-fold validation: {'accuracy': 0.9034999999999999, 'precision': 0.9050029244140706, 'recall': 0.9016, 'f1': 0.9032039018608009, 'auc': 0.9627274, 'fpr': 0.09459999999999999, 'tnr': 0.9054}
+Validate_prediction_by_links: {'accuracy': 0.8681818181818182, 'precision': 0.08333333333333333, 'recall': 0.045, 'f1': 0.05844155844155844, 'auc': 0.5016962500000001, 'fpr': 0.0495}
+Setting training and test sets
+Extracting features for training set:
+Graph loaded
+100%|███████████████████████████████████████████████████████████████████████████████████| 10000/10000 [01:50<00:00, 90.19feature/s]
+Features were written to: /Users/vhying/Desktop/CS 221/Project/Network-Anomaly-Detection/data/temp/twitter_GradientBoosting_train.csv
+Extracting features for test set:
+Graph loaded
+70201feature [14:00, 83.48feature/s]
+Features were written to: /Users/vhying/Desktop/CS 221/Project/Network-Anomaly-Detection/data/temp/twitter_GradientBoosting_test.csv
+Training 10-fold validation: {'accuracy': 0.8958999999999999, 'precision': 0.8994324183556783, 'recall': 0.8916000000000001, 'f1': 0.8954415940642446, 'auc': 0.9594018, 'fpr': 0.0998, 'tnr': 0.9002000000000001}
+Validate_prediction_by_links: {'accuracy': 0.8527272727272728, 'precision': 0.06944444444444445, 'recall': 0.05, 'f1': 0.05813953488372093, 'auc': 0.48947875, 'fpr': 0.067}
+Setting training and test sets
+Extracting features for training set:
+Graph loaded
+100%|███████████████████████████████████████████████████████████████████████████████████| 10000/10000 [01:59<00:00, 83.59feature/s]
+Features were written to: /Users/vhying/Desktop/CS 221/Project/Network-Anomaly-Detection/data/temp/twitter_IsolationForest_train.csv
+Extracting features for test set:
+Graph loaded
+69620feature [12:07, 95.67feature/s]
+Features were written to: /Users/vhying/Desktop/CS 221/Project/Network-Anomaly-Detection/data/temp/twitter_IsolationForest_test.csv
+Training 10-fold validation: {'accuracy': 0.8942, 'precision': 0.8929992272163856, 'recall': 0.8958000000000002, 'f1': 0.8943550361678717, 'auc': 0.9570902, 'fpr': 0.10740000000000001, 'tnr': 0.8926000000000002}
+Validate_prediction_by_links: {'accuracy': 0.8763636363636363, 'precision': 0.125, 'recall': 0.06, 'f1': 0.08108108108108109, 'auc': 0.5446175, 'fpr': 0.042}
+

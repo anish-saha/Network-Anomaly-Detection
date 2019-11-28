@@ -84,7 +84,7 @@ class GraphLearningController:
 
     def evaluate_classifier(self, my_graph, test_size=0,
                             training_size=0, id_col_name="src",
-                            feature_dict=fast_link_features_small,
+                            feature_dict=fast_link_features_max,
                             meta_data_cols=None):
         """Execute the link classifier
 
