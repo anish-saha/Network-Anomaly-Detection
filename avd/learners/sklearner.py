@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 from sklearn import linear_model, svm, tree, ensemble, feature_extraction, preprocessing
-from sklearn.metrics import recall_score, precision_score, accuracy_score, roc_auc_score
+from sklearn.metrics import recall_score, precision_score, accuracy_score, roc_auc_score, f1_score
 from sklearn.model_selection import StratifiedKFold
 from sklearn.model_selection import RandomizedSearchCV
 from sklearn.ensemble import IsolationForest
@@ -38,7 +38,6 @@ class SkLearner(AbstractLearner):
     def merge_with_labels(self, classified, labels_path, merge_col_name="id", default_label=0):
         node_labels = pd.read_csv(labels_path, dtype={"id": str})
         labels = node_labels.pop("label").values
-        # labels = self.transform_labels(labels)
         node_labels["actual"] = labels
         merged_data = pd.merge(classified, node_labels, left_on='src_id', right_on=merge_col_name, how='left')
         merged_data = merged_data.drop(["id"], axis=1)
@@ -174,10 +173,8 @@ class SkLearner(AbstractLearner):
         skf = StratifiedKFold(n_folds)
         for train_index, test_index in skf.split(features, labels):
             yield train_index, test_index
-            # return cross_validation.StratifiedKFold(labels, n_folds)
 
     def get_classification_metrics(self, l_test, prediction, probas):
-        # fpr, tpr, thresholds = roc_curve(l_test, prediction)
         false_positive = float(
             len(np.where(l_test - prediction == -1)[0]))  # 0 (truth) - 1 (prediction) == -1 which is a false positive
         true_negative = float(
@@ -192,7 +189,7 @@ class SkLearner(AbstractLearner):
         return metrics
 
     def cross_validate(self, dataset, n_folds=10):
-        roc_auc, recall, precision, accuracy, fpr, tpr, tnr = [], [], [], [], [], [], []
+        roc_auc, recall, precision, accuracy, fpr, tnr, f1 = [], [], [], [], [], [], []
         for train_index, test_index in self.split_kfold(dataset.features, dataset.labels, n_folds):
             f_train, f_test = dataset.features[train_index], dataset.features[test_index]
             l_train, l_test = dataset.labels[train_index], dataset.labels[test_index]
@@ -200,19 +197,22 @@ class SkLearner(AbstractLearner):
             prediction = model.get_prediction(f_test)
             probas = model.get_prediction_probabilities(f_test)[:, 1]
             metrics = self.get_classification_metrics(l_test, prediction, probas)
-            roc_auc.append(metrics["auc"])
-            recall.append(metrics["recall"])  # TPR
-            precision.append(metrics["precision"])
             accuracy.append(metrics["accuracy"])
+            precision.append(metrics["precision"])
+            recall.append(metrics["recall"])  # TPR
+            f1.append(metrics["f1"])
+            roc_auc.append(metrics["auc"])
             fpr.append(metrics["fpr"])
             tnr.append(metrics["tnr"])
-        # return {"auc": np.mean(roc_auc)}
-        # print(classification_report(l_test, prediction))
-        # print("Predicted: 0   1")
-        # print(confusion_matrix(l_test, prediction))
-        print("Cross-validation results:")
-        return {"auc": np.mean(roc_auc), "recall": np.mean(recall), "precision": np.mean(precision),
-                "accuracy": np.mean(accuracy), "fpr": np.mean(fpr), "tnr": np.mean(tnr)}
+        return {
+                "accuracy": np.mean(accuracy),
+                "precision": np.mean(precision),
+                "recall": np.mean(recall),
+                "f1": np.mean(f1),
+                "auc": np.mean(roc_auc),
+                "fpr": np.mean(fpr),
+                "tnr": np.mean(tnr)
+                }
 
     def get_evaluation(self, data):
         prediction = self.get_prediction(data)
@@ -221,22 +221,28 @@ class SkLearner(AbstractLearner):
         return self.get_classification_metrics(data.labels, prediction, probas)
 
     def validate_prediction_by_links(self, prediction):
-        roc_auc, recall, precision, accuracy, fpr, tpr = [], [], [], [], [], []
-
+        roc_auc, recall, precision, accuracy, fpr, tnr, f1 = [], [], [], [], [], [], []
         try:
             metrics = self.get_classification_metrics( \
                                         prediction["actual"].values, \
                                         prediction["predicted_label"].values, \
                                         prediction["pos probability"].values)
-            roc_auc.append(metrics["auc"])
-            recall.append(metrics["recall"])  # TPR
-            precision.append(metrics["precision"])
             accuracy.append(metrics["accuracy"])
+            precision.append(metrics["precision"])
+            recall.append(metrics["recall"])  # TPR
+            f1.append(metrics["f1"])
+            roc_auc.append(metrics["auc"])
             fpr.append(metrics["fpr"])
         except ValueError:
             print("Error")
-        return {"auc": np.mean(roc_auc), "recall": np.mean(recall), "precision": np.mean(precision),
-                "accuracy": np.mean(accuracy), "fpr": np.mean(fpr)}
+        return {
+                "accuracy": np.mean(accuracy),
+                "precision": np.mean(precision),
+                "recall": np.mean(recall),
+                "f1": np.mean(f1),
+                "auc": np.mean(roc_auc),
+                "fpr": np.mean(fpr)
+                }
 
     def classify_by_links_probability(self, probas, features_ids, labels=None, threshold=0.5):
         if not labels:
