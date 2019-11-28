@@ -21,12 +21,7 @@ class GraphLearningController:
         config : GraphConfig
             config object that contains all the necessary information about the graph
         """
-        #self._ml = MlController(cls.set_logistic_regression_classifier())
-        #self._ml = MlController(cls.set_randomforest_classifier())
-        #self._ml = MlController(cls.set_adaboost_classifier())
-        #self._ml = MlController(cls.set_bagging_classifier())
-        #self._ml = MlController(cls.set_rf_bagging_classifier())
-        self._ml = MlController(cls.set_gradient_boosting_classifier())
+        self._ml = MlController(cls.set_randomforest_classifier())
         self._config = config
         self._test_path = os.path.join(TEMP_DIR, config.name + "_test.csv")
         self._train_path = os.path.join(TEMP_DIR, config.name + "_train.csv")
@@ -89,7 +84,7 @@ class GraphLearningController:
 
     def evaluate_classifier(self, my_graph, test_size=0,
                             training_size=0, id_col_name="src",
-                            feature_dict=fast_link_features_max,
+                            feature_dict=fast_link_features_small,
                             meta_data_cols=None):
         """Execute the link classifier
 
@@ -156,5 +151,4 @@ class GraphLearningController:
         if isinstance(classified, DataFrame):
             classified.to_csv(results_output_path)
 
-        print("Test results:")
         print("Validate_prediction_by_links: {}".format(self._ml.validate_prediction_by_links(classified)))
