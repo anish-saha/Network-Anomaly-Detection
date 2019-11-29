@@ -14,7 +14,8 @@ if not os.path.exists(output_folder):
 
 labels = {"neg": "Real", "pos": "Fake"}
 
-twitter_graph, twitter_config = load_data(labels_map=labels)
+twitter_graph, twitter_config = load_data(dataset_file_name="twitter_filtered.csv", labels_file_name="twitter_labels_filtered.csv",
+                                          labels_map=labels, limit=6000000) # Loads filtered dataset.
 print(len(twitter_graph.vertices))
 
 if twitter_graph.is_directed:
@@ -22,8 +23,7 @@ if twitter_graph.is_directed:
 else:
     meta_data_cols = ["dst", "src", "number_of_friends_u", "number_of_friends_v"]
 
-#for i in range(10):
-twitter_config._name = "twitter_"# + str(i) + "_"
+twitter_config._name = "twitter_" + "RandomForest"
 learner = SkLearner(labels=labels)
 glc = GraphLearningController(learner, twitter_config)
 result_path = os.path.join(output_folder, twitter_config.name  + "res.csv")
@@ -32,6 +32,73 @@ glc.classify_by_links(twitter_graph,
                       test_size={"neg": 2000, "pos": 200},
                       train_size={"neg": 5000, "pos": 5000},
                       meta_data_cols=meta_data_cols)
+
+
+twitter_config._name = "twitter_" + "LogisticRegression"
+learner = SkLearner(labels=labels).set_logistic_regression_classifier()
+glc = GraphLearningController(learner, twitter_config)
+result_path = os.path.join(output_folder, twitter_config.name  + "res.csv")
+glc.classify_by_links(twitter_graph, 
+                      result_path,
+                      test_size={"neg": 2000, "pos": 200},
+                      train_size={"neg": 5000, "pos": 5000},
+                      meta_data_cols=meta_data_cols)
+
+
+twitter_config._name = "twitter_" + "Adaboost"
+learner = SkLearner(labels=labels).set_adaboost_classifier()
+glc = GraphLearningController(learner, twitter_config)
+result_path = os.path.join(output_folder, twitter_config.name  + "res.csv")
+glc.classify_by_links(twitter_graph, 
+                      result_path,
+                      test_size={"neg": 2000, "pos": 200},
+                      train_size={"neg": 5000, "pos": 5000},
+                      meta_data_cols=meta_data_cols)
+
+
+twitter_config._name = "twitter_" + "Bagging"
+learner = SkLearner(labels=labels).set_bagging_classifier()
+glc = GraphLearningController(learner, twitter_config)
+result_path = os.path.join(output_folder, twitter_config.name  + "res.csv")
+glc.classify_by_links(twitter_graph, 
+                      result_path,
+                      test_size={"neg": 2000, "pos": 200},
+                      train_size={"neg": 5000, "pos": 5000},
+                      meta_data_cols=meta_data_cols)
+
+
+twitter_config._name = "twitter_" + "RFBagging"
+learner = SkLearner(labels=labels).set_rf_bagging_classifier()
+glc = GraphLearningController(learner, twitter_config)
+result_path = os.path.join(output_folder, twitter_config.name  + "res.csv")
+glc.classify_by_links(twitter_graph, 
+                      result_path,
+                      test_size={"neg": 2000, "pos": 200},
+                      train_size={"neg": 5000, "pos": 5000},
+                      meta_data_cols=meta_data_cols)
+
+
+twitter_config._name = "twitter_" + "GradientBoosting"
+learner = SkLearner(labels=labels).set_gradient_boosting_classifier()
+glc = GraphLearningController(learner, twitter_config)
+result_path = os.path.join(output_folder, twitter_config.name  + "res.csv")
+glc.classify_by_links(twitter_graph, 
+                      result_path,
+                      test_size={"neg": 2000, "pos": 200},
+                      train_size={"neg": 5000, "pos": 5000},
+                      meta_data_cols=meta_data_cols)
+
+
+twitter_config._name = "twitter_" + "IsolationForest"
+learner = SkLearner(labels=labels).set_isolation_forest_classifier()
+glc = GraphLearningController(learner, twitter_config)
+result_path = os.path.join(output_folder, twitter_config.name  + "res.csv")
+glc.classify_by_links(twitter_graph, 
+                      result_path,
+                      test_size={"neg": 2000, "pos": 200},
+                      train_size={"neg": 5000, "pos": 5000},
+                      meta_data_cols=meta_data_cols)
+
 
 def aggreagate_res(data_folder, res_path):
     results_frame = pd.DataFrame()
@@ -59,3 +126,5 @@ import matplotlib.pyplot as plt
 plt.figure()
 df[["k", "p@k"]][:500].plot(x="k", y= "p@k")
 plt.plot(df[["k"]].values, np.full((len(df[["k"]]),1), 0.06))
+
+
