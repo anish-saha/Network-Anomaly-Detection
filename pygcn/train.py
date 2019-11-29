@@ -40,7 +40,7 @@ if args.cuda:
     torch.cuda.manual_seed(args.seed)
 
 
-def load_data(path="../data/twitter/", dataset="twitter"):
+def load_data(path="data/twitter/", dataset="twitter"):
     """Load filtered Twitter dataset"""
     print('Loading {} dataset...'.format(dataset))
 
