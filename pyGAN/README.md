@@ -19,6 +19,10 @@ The repo has been forked initially from https://github.com/tkipf/pygcn. The offi
 
 The branch **master** contains the implementation from the paper. The branch **similar_impl_tensorflow** the implementation from the official Tensorflow repository.
 
+# Usaage
+
+python train.py --epochs 100
+
 # Performances
 
 For the branch **master**, the training of the transductive learning on Cora task on a Titan Xp takes ~0.9 sec per epoch and 10-15 minutes for the whole training (~800 epochs). The final accuracy is between 84.2 and 85.3 (obtained on 5 different runs). For the branch **similar_impl_tensorflow**, the training takes less than 1 minute and reach ~83.0.
