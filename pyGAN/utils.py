@@ -13,7 +13,7 @@ def load_data(path="./data/twitter/", dataset="twitter"):
     """Load citation network dataset (cora only for now)"""
     print('Loading {} dataset...'.format(dataset))
 
-    idx_features_labels = np.genfromtxt("{}{}.features_small".format(path, dataset),
+    idx_features_labels = np.genfromtxt("{}{}.features_mid".format(path, dataset),
                                         delimiter=',',
                                         dtype=np.dtype(str))
 
@@ -25,26 +25,14 @@ def load_data(path="./data/twitter/", dataset="twitter"):
     # now the format is:
     #     node, label, feature1, feature2, ... featureN
     # shuffle the rows
-    #idx_features_labels = idx_features_labels[idx_features_labels[:, 1].argsort()]
 
-    idx_train = list(range(0, 5))
-    idx_val = list(range(5, 8))
-    idx_test = list(range(8, 11))
-
-    #np.random.shuffle(idx_features_labels)
-    #idx_train = list(range(0, 50000))
-    #np.random.shuffle(idx_train)
-    #idx_val = list(range(50000, 60000))
-    #np.random.shuffle(idx_val)
-    #idx_test = list(range(60000, 70000))
-    #np.random.shuffle(idx_test)
-
-    #idx_train = list(range(0, 5000)) + list(range(10000, 15000))
-    #np.random.shuffle(idx_train)
-    #idx_val = list(range(5000, 5500)) + list(range(15000, 15500))
-    #np.random.shuffle(idx_val)
-    #idx_test = list(range(6000, 6500)) + list(range(16000, 16500))
-    #np.random.shuffle(idx_test)
+    np.random.shuffle(idx_features_labels)
+    idx_train = list(range(0, 1000))
+    np.random.shuffle(idx_train)
+    idx_val = list(range(1000, 1500))
+    np.random.shuffle(idx_val)
+    idx_test = list(range(1500, 2000))
+    np.random.shuffle(idx_test)
 
     # Extract features
     features = sp.csr_matrix(idx_features_labels[:, 2:], dtype=np.float32)
@@ -57,7 +45,7 @@ def load_data(path="./data/twitter/", dataset="twitter"):
     idx = np.array(idx_features_labels[:, 0], dtype=np.int32)
     idx_map = {j: i for i, j in enumerate(idx)}
     # Extract edges from the graph
-    edges_unordered = np.genfromtxt("{}{}.graph_small".format(path, dataset),
+    edges_unordered = np.genfromtxt("{}{}.graph_mid".format(path, dataset),
                                     delimiter=',',
                                     dtype=np.int32)
 
