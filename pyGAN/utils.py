@@ -1,6 +1,7 @@
 import numpy as np
 import scipy.sparse as sp
 import torch
+from sklearn.metrics import confusion_matrix
 
 
 def encode_onehot(labels):
@@ -10,7 +11,7 @@ def encode_onehot(labels):
     return labels_onehot
 
 def load_data(path="./data/twitter/", dataset="twitter"):
-    """Load citation network dataset (cora only for now)"""
+    """Load Twitter dataset"""
     print('Loading {} dataset...'.format(dataset))
 
     idx_features_labels = np.genfromtxt("{}{}.features_mid".format(path, dataset),
@@ -27,11 +28,11 @@ def load_data(path="./data/twitter/", dataset="twitter"):
     # shuffle the rows
 
     np.random.shuffle(idx_features_labels)
-    idx_train = list(range(0, 1000))
+    idx_train = list(range(0, 7000))
     np.random.shuffle(idx_train)
-    idx_val = list(range(1000, 1500))
+    idx_val = list(range(7000, 8000))
     np.random.shuffle(idx_val)
-    idx_test = list(range(1500, 2000))
+    idx_test = list(range(8500, 9000))
     np.random.shuffle(idx_test)
 
     # Extract features
@@ -138,3 +139,15 @@ def accuracy(output, labels):
     correct = correct.sum()
     return correct / len(labels)
 
+def accuracy_tw(output, labels):
+    preds = output.max(1)[1].type_as(labels)
+    correct = preds.eq(labels).double()
+    correct = correct.sum()
+    print("total labels:", len(labels))
+    print("total preds:", len(preds))
+    tn, fp, fn, tp = confusion_matrix(labels, preds).ravel()
+    print("confusion matrix (tn,fp,fn,tp):", tn, fp, fn, tp)
+    print("Accuracy:", correct / len(labels))
+    print("Precision:", tp/(tp+fp))
+    print("Recall:", tp / (tp + fn))
+    return correct / len(labels)
