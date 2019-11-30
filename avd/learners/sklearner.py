@@ -154,7 +154,7 @@ class SkLearner(AbstractLearner):
         # Train classifier on dataset
         print("Training classifier...")
         self._classifier = self._classifier.fit(dataset.features, dataset.labels).best_estimator_
-        print("Optimized hyperparameters:\n" + self._classifier.get_params()
+        print("Optimized hyperparameters:\n" + self._classifier.get_params())
         return self
 
     def get_prediction(self, prediction_data):

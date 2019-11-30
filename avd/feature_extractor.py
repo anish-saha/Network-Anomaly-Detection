@@ -403,7 +403,7 @@ class FeatureExtractor(object):
 
     def get_in_degree_centrality(self, node):
         if not self._in_degree_centrality:
-            self._in_degree_centrality = self._graph.in_degree_centrality
+            self._in_degree_centrality = self._graph.in_degree_centrality()
         if node in self._in_degree_centrality.keys():
             return self._in_degree_centrality[node]
         else:
@@ -411,7 +411,7 @@ class FeatureExtractor(object):
 
     def get_out_degree_centrality(self, node):
         if not self._out_degree_centrality:
-            self._out_degree_centrality = self._graph.out_degree_centrality
+            self._out_degree_centrality = self._graph.out_degree_centrality()
         if node in self._out_degree_centrality.keys():
             return self._out_degree_centrality[node]
         else:
@@ -419,7 +419,7 @@ class FeatureExtractor(object):
 
     def get_nodes_number_of_cliques(self, node):
         if not self._nodes_number_of_cliques:
-            self._nodes_number_of_cliques = self._graph.nodes_number_of_cliques
+            self._nodes_number_of_cliques = self._graph.nodes_number_of_cliques()
         if node in self._nodes_number_of_cliques:
             return self._nodes_number_of_cliques[node]
         else:
@@ -427,7 +427,7 @@ class FeatureExtractor(object):
 
     def get_degree_centrality(self, node):
         if not self._degree_centrality:
-            self._degree_centrality = self._graph.degree_centrality
+            self._degree_centrality = self._graph.degree_centrality()
         if node in self._degree_centrality.keys():
             return self._degree_centrality[node]
         else:
@@ -435,7 +435,7 @@ class FeatureExtractor(object):
 
     def get_pagerank(self, node):
         if not self._pagerank:
-            self._pagerank = self._graph.pagerank
+            self._pagerank = self._graph.pagerank()
         if node in self._pagerank[0].keys():
             return self._pagerank[0][node]
         else:
@@ -443,7 +443,7 @@ class FeatureExtractor(object):
 
     def get_hubs(self, node):
         if not self._hits:
-            self._hits = self._graph.hits
+            self._hits = self._graph.hits()
         if node in self._hits[0].keys():
             return self._hits[0][node]
         else:
@@ -451,7 +451,7 @@ class FeatureExtractor(object):
 
     def get_authorities(self, node):
         if not self._hits:
-            self._hits = self._graph.hits
+            self._hits = self._graph.hits()
         if node in self._hits[1].keys():
             return self._hits[1][node]
         else:
@@ -459,7 +459,7 @@ class FeatureExtractor(object):
 
     def get_average_neighbor_degree(self, node):
         if not self._average_neighbor_degree:
-            self._average_neighbor_degree = self._graph.average_neighbor_degree
+            self._average_neighbor_degree = self._graph.average_neighbor_degree()
         if node in self._average_neighbor_degree.keys():
             return self._average_neighbor_degree[node]
         else:
@@ -467,15 +467,15 @@ class FeatureExtractor(object):
 
     def get_eigenvector(self, node):
         if not self._eigenvector:
-            self._eigenvector = self._graph.eigenvector
+            self._eigenvector = self._graph.eigenvector()
         if node in self._eigenvector.keys():
             return self._eigenvector[node]
         else:
             return 0
 
-    def get_betweenness(self, node):
+    def get_betweenness_centrality(self, node):
         if not self._betweenness:
-            self._betweenness = self._graph.betweenness
+            self._betweenness = self._graph.betweenness_centrality()
         if node in self._betweenness.keys():
             return self._betweenness[node]
         else:
@@ -483,7 +483,7 @@ class FeatureExtractor(object):
 
     def get_load_centrality(self, node):
         if not self._load_centrality:
-            self._load_centrality = self._graph.load_centrality
+            self._load_centrality = self._graph.load_centrality()
         if node in self._load_centrality.keys():
             return self._load_centrality[node]
         else:
@@ -491,7 +491,7 @@ class FeatureExtractor(object):
 
     def get_communicability_centrality(self, node):
         if not self._communicability_centrality:
-            self._communicability_centrality = self._graph.communicability_centrality
+            self._communicability_centrality = self._graph.communicability_centrality()
         if node in self._communicability_centrality.keys():
             return self._communicability_centrality[node]
         else:
@@ -499,7 +499,7 @@ class FeatureExtractor(object):
 
     def get_closeness(self, node):
         if not self._closeness:
-            self._closeness = self._graph.closeness
+            self._closeness = self._graph.closeness()
         if node in self._closeness.keys():
             return self._closeness[node]
         else:

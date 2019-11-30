@@ -109,7 +109,21 @@ fast_link_features_max = {
                  "bi_common_friends": "get_bi_common_friends"
         },
         "vertex_v": {"out_degree_v": "get_out_degree",
-                     "in_degree_v": "get_in_degree"},
+                     "in_degree_v": "get_in_degree",
+                     # Node features (some of these cause errors)
+                     "average_neighbor_degree": "get_average_neighbor_degree",
+                     # "closeness": "get_closeness",
+                     # "pagerank": "get_pagerank",
+                     # "hubs": "get_hubs",
+                     # "authorities": "get_authorities",
+                     # "eigenvector": "get_eigenvector",
+                     # "number_of_cliques": "get_nodes_number_of_cliques",
+                     # "load_centrality": "get_load_centrality",
+                     # "communicability_centrality": "get_communicability_centrality",
+                     # "betweenness_centrality": "get_betweenness_centrality",
+                     "in_degree_centrality": "get_in_degree_centrality",
+                     "out_degree_centrality": "get_out_degree_centrality",
+                     "degree_centrality": "get_degree_centrality"},
         "vertex_u": {"out_degree_u": "get_out_degree",
                      "in_degree_u": "get_in_degree"}
     },
