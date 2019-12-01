@@ -137,7 +137,9 @@ def accuracy(output, labels):
     preds = output.max(1)[1].type_as(labels)
     correct = preds.eq(labels).double()
     correct = correct.sum()
-    return correct / len(labels)
+    acc = correct / len(labels)
+    confusion_m = confusion_matrix(labels, preds).ravel()
+    return (acc, confusion_m)
 
 def accuracy_tw(output, labels):
     preds = output.max(1)[1].type_as(labels)
