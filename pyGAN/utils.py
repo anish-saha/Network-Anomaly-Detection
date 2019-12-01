@@ -28,11 +28,11 @@ def load_data(path="./data/twitter/", dataset="twitter"):
     # shuffle the rows
 
     np.random.shuffle(idx_features_labels)
-    idx_train = list(range(0, 7000))
+    idx_train = list(range(0, 3000))
     np.random.shuffle(idx_train)
-    idx_val = list(range(7000, 8000))
+    idx_val = list(range(3000, 3900))
     np.random.shuffle(idx_val)
-    idx_test = list(range(8500, 9000))
+    idx_test = list(range(4000, 4900))
     np.random.shuffle(idx_test)
 
     # Extract features
