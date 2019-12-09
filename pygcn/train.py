@@ -91,7 +91,7 @@ def test():
         output = model(features, adj)
         loss_test = F.nll_loss(output[idx_test], labels[idx_test])
         acc_test, confusion_matrix = accuracy(output[idx_test], labels[idx_test])
-        print("==========Test set results==========")
+        print("====================Test set results====================")
         print("Loss= {:.4f}".format(loss_test.item()),
             "Accuracy= {:.4f}".format(acc_test.item()))
         print('Confusion Matrix (tn, fp, fn, tp)=', confusion_matrix)
