@@ -98,18 +98,6 @@ def accuracy(output, labels):
     confusion_m = confusion_matrix(labels, preds).ravel()
     return (acc, confusion_m)
 
-def accuracy_new(output, labels):
-    print("output:", output)
-    print("labels:", labels)
-    preds = output.max(1)[1].type_as(labels)
-    print("predictions:", preds)
-    correct = preds.eq(labels).double()
-    correct = correct.sum()
-    acc = correct / len(labels)
-    print("correct:", correct, "total:", len(labels), "accuracy:", acc)
-    return acc
-
-
 def sparse_mx_to_torch_sparse_tensor(sparse_mx):
     """Convert a scipy sparse matrix to a torch sparse tensor."""
     sparse_mx = sparse_mx.tocoo().astype(np.float32)
