@@ -26,20 +26,19 @@ else:
 twitter_config._name = "twitter_" + "RandomForest"
 learner = SkLearner(labels=labels)
 glc = GraphLearningController(learner, twitter_config)
-result_path = os.path.join(output_folder, twitter_config.name  + "res.csv")
+rf_result_path = os.path.join(output_folder, twitter_config.name  + "_res.csv")
 glc.classify_by_links(twitter_graph,
-                      result_path,
+                      rf_result_path,
                       test_size={"neg": 2000, "pos": 200},
                       train_size={"neg": 5000, "pos": 5000},
                       meta_data_cols=meta_data_cols)
 
-
 twitter_config._name = "twitter_" + "LogisticRegression"
 learner = SkLearner(labels=labels).set_logistic_regression_classifier()
 glc = GraphLearningController(learner, twitter_config)
-result_path = os.path.join(output_folder, twitter_config.name  + "res.csv")
+lr_result_path = os.path.join(output_folder, twitter_config.name  + "_res.csv")
 glc.classify_by_links(twitter_graph, 
-                      result_path,
+                      lr_result_path,
                       test_size={"neg": 2000, "pos": 200},
                       train_size={"neg": 5000, "pos": 5000},
                       meta_data_cols=meta_data_cols)
@@ -48,9 +47,9 @@ glc.classify_by_links(twitter_graph,
 twitter_config._name = "twitter_" + "Adaboost"
 learner = SkLearner(labels=labels).set_adaboost_classifier()
 glc = GraphLearningController(learner, twitter_config)
-result_path = os.path.join(output_folder, twitter_config.name  + "res.csv")
+adaboost_result_path = os.path.join(output_folder, twitter_config.name  + "_res.csv")
 glc.classify_by_links(twitter_graph, 
-                      result_path,
+                      adaboost_result_path,
                       test_size={"neg": 2000, "pos": 200},
                       train_size={"neg": 5000, "pos": 5000},
                       meta_data_cols=meta_data_cols)
@@ -59,9 +58,9 @@ glc.classify_by_links(twitter_graph,
 twitter_config._name = "twitter_" + "Bagging"
 learner = SkLearner(labels=labels).set_bagging_classifier()
 glc = GraphLearningController(learner, twitter_config)
-result_path = os.path.join(output_folder, twitter_config.name  + "res.csv")
+bagging_result_path = os.path.join(output_folder, twitter_config.name  + "_res.csv")
 glc.classify_by_links(twitter_graph, 
-                      result_path,
+                      bagging_result_path,
                       test_size={"neg": 2000, "pos": 200},
                       train_size={"neg": 5000, "pos": 5000},
                       meta_data_cols=meta_data_cols)
@@ -70,9 +69,9 @@ glc.classify_by_links(twitter_graph,
 twitter_config._name = "twitter_" + "RFBagging"
 learner = SkLearner(labels=labels).set_rf_bagging_classifier()
 glc = GraphLearningController(learner, twitter_config)
-result_path = os.path.join(output_folder, twitter_config.name  + "res.csv")
+baggingRF_result_path = os.path.join(output_folder, twitter_config.name  + "_res.csv")
 glc.classify_by_links(twitter_graph, 
-                      result_path,
+                      baggingRF_result_path,
                       test_size={"neg": 2000, "pos": 200},
                       train_size={"neg": 5000, "pos": 5000},
                       meta_data_cols=meta_data_cols)
@@ -81,9 +80,9 @@ glc.classify_by_links(twitter_graph,
 twitter_config._name = "twitter_" + "GradientBoosting"
 learner = SkLearner(labels=labels).set_gradient_boosting_classifier()
 glc = GraphLearningController(learner, twitter_config)
-result_path = os.path.join(output_folder, twitter_config.name  + "res.csv")
+gradboost_result_path = os.path.join(output_folder, twitter_config.name  + "_res.csv")
 glc.classify_by_links(twitter_graph, 
-                      result_path,
+                      gradboost_result_path,
                       test_size={"neg": 2000, "pos": 200},
                       train_size={"neg": 5000, "pos": 5000},
                       meta_data_cols=meta_data_cols)
@@ -92,39 +91,80 @@ glc.classify_by_links(twitter_graph,
 twitter_config._name = "twitter_" + "IsolationForest"
 learner = SkLearner(labels=labels).set_isolation_forest_classifier()
 glc = GraphLearningController(learner, twitter_config)
-result_path = os.path.join(output_folder, twitter_config.name  + "res.csv")
+iso_result_path = os.path.join(output_folder, twitter_config.name  + "_res.csv")
 glc.classify_by_links(twitter_graph, 
-                      result_path,
+                      iso_result_path,
                       test_size={"neg": 2000, "pos": 200},
                       train_size={"neg": 5000, "pos": 5000},
                       meta_data_cols=meta_data_cols)
 
-
-def aggreagate_res(data_folder, res_path):
+def aggregate_res(res_path):
     results_frame = pd.DataFrame()
-    for f in os.listdir(data_folder):
-        temp_df = pd.read_csv(data_folder + "/" + f,index_col=0, encoding='utf-8', engine='python')
-        results_frame = results_frame.append(temp_df)
+    temp_df = pd.read_csv(res_path, index_col=0, encoding='utf-8', engine='python')
+    results_frame = results_frame.append(temp_df)
     results_frame = results_frame.groupby("src_id").mean()
 
     return results_frame.reset_index()
 
-df = aggreagate_res(output_folder, "res.csv").sort_values("mean_link_label", ascending=False)
+rf_df = aggregate_res(rf_result_path).sort_values("mean_link_label", ascending=False)
+lr_df = aggregate_res(lr_result_path).sort_values("mean_link_label", ascending=False)
+adaboost_df = aggregate_res(adaboost_result_path).sort_values("mean_link_label", ascending=False)
+bagging_df = aggregate_res(bagging_result_path).sort_values("mean_link_label", ascending=False)
+baggingRF_df = aggregate_res(baggingRF_result_path).sort_values("mean_link_label", ascending=False)
+gradboost_df = aggregate_res(gradboost_result_path).sort_values("mean_link_label", ascending=False)
+iso_df = aggregate_res(iso_result_path).sort_values("mean_link_label", ascending=False)
 
-df["actual_sum"] = df["actual"].cumsum()
-df["k"] = 1
-df["k"] = df["k"].cumsum()
+def calc_pk(df):
+    df["actual_sum"] = df["actual"].cumsum()
+    df["k"] = 1
+    df["k"] = df["k"].cumsum()
+    return df
 
-df.head(10)
+rf_df = calc_pk(rf_df)
+lr_df = calc_pk(lr_df)
+adaboost_df = calc_pk(adaboost_df)
+bagging_df = calc_pk(bagging_df)
+baggingRF_df = calc_pk(baggingRF_df)
+gradboost_df = calc_pk(gradboost_df)
+iso_df = calc_pk(iso_df)
 
-df["p@k"] = df.apply(lambda x: x["actual_sum"]/x["k"], axis=1)
+rf_df.head(5)
 
-df[["k", "p@k"]].head(10)
+rf_df["p@k"] = rf_df.apply(lambda x: x["actual_sum"]/x["k"], axis=1)
+lr_df["p@k"] = lr_df.apply(lambda x: x["actual_sum"]/x["k"], axis=1)
+adaboost_df["p@k"] = adaboost_df.apply(lambda x: x["actual_sum"]/x["k"], axis=1)
+bagging_df["p@k"] = bagging_df.apply(lambda x: x["actual_sum"]/x["k"], axis=1)
+baggingRF_df["p@k"] = baggingRF_df.apply(lambda x: x["actual_sum"]/x["k"], axis=1)
+gradboost_df["p@k"] = gradboost_df.apply(lambda x: x["actual_sum"]/x["k"], axis=1)
+iso_df["p@k"] = iso_df.apply(lambda x: x["actual_sum"]/x["k"], axis=1)
+
+rf_df[["k", "p@k"]].head(5)
+
 
 import matplotlib.pyplot as plt
 
-plt.figure()
-df[["k", "p@k"]][:500].plot(x="k", y= "p@k")
-plt.plot(df[["k"]].values, np.full((len(df[["k"]]),1), 0.06))
+plt.style.use('seaborn-darkgrid')
+palette = plt.get_cmap('Set1')
+plt.figure(figsize=(20,10))
 
+plt.plot(rf_df["k"][:500], rf_df["p@k"][:500], marker='',
+         color=palette(0), linewidth=1, alpha=0.9, label="Random Forest")
+plt.plot(lr_df["k"][:500], lr_df["p@k"][:500], marker='',
+         color=palette(1), linewidth=1, alpha=0.9, label="Logistic Regression")
+plt.plot(adaboost_df["k"][:500], adaboost_df["p@k"][:500], marker='',
+         color=palette(2), linewidth=1, alpha=0.9, label="Adaboost")
+plt.plot(bagging_df["k"][:500], bagging_df["p@k"][:500], marker='',
+         color=palette(3), linewidth=1, alpha=0.9, label="Bagging")
+plt.plot(baggingRF_df["k"][:500], baggingRF_df["p@k"][:500], marker='',
+         color=palette(4), linewidth=1, alpha=0.9, label="Bagging Random FOrest")
+plt.plot(gradboost_df["k"][:500], gradboost_df["p@k"][:500], marker='',
+         color=palette(5), linewidth=1, alpha=0.9, label="Gradient Boosting")
+plt.plot(iso_df["k"][:500], iso_df["p@k"][:500], marker='',
+         color=palette(6), linewidth=1, alpha=0.9, label="Isolation Forest")
 
+plt.legend(fontsize=14)
+plt.title("Precision @ k for Different First-Stage Models", loc='left', fontsize=20, fontweight=4, color='black')
+plt.xlabel("k", fontsize=14, fontweight=2)
+plt.ylabel("precision @ k", fontsize=14, fontweight=2)
+
+plt.savefig('precision_at_k.png')
