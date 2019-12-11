@@ -138,7 +138,21 @@ baggingRF_df["p@k"] = baggingRF_df.apply(lambda x: x["actual_sum"]/x["k"], axis=
 gradboost_df["p@k"] = gradboost_df.apply(lambda x: x["actual_sum"]/x["k"], axis=1)
 iso_df["p@k"] = iso_df.apply(lambda x: x["actual_sum"]/x["k"], axis=1)
 
-rf_df[["k", "p@k"]].head(5)
+print("PRECISION AT K")
+print("Random Forest:")
+print(rf_df[["k", "p@k"]].head(10))
+print("Logistic Regression:")
+print(lr_df[["k", "p@k"]].head(10))
+print("Adaboost:")
+print(adaboost_df[["k", "p@k"]].head(10))
+print("Bagging:")
+print(bagging_df[["k", "p@k"]].head(10))
+print("Bagging Random Forest:")
+print(baggingRF_df[["k", "p@k"]].head(10))
+print("Gradient Boosting:")
+print(gradboost_df[["k", "p@k"]].head(10))
+print("Isolation Forest:")
+print(iso_df[["k", "p@k"]].head(10))
 
 
 import matplotlib.pyplot as plt
@@ -156,7 +170,7 @@ plt.plot(adaboost_df["k"][:500], adaboost_df["p@k"][:500], marker='',
 plt.plot(bagging_df["k"][:500], bagging_df["p@k"][:500], marker='',
          color=palette(3), linewidth=1, alpha=0.9, label="Bagging")
 plt.plot(baggingRF_df["k"][:500], baggingRF_df["p@k"][:500], marker='',
-         color=palette(4), linewidth=1, alpha=0.9, label="Bagging Random FOrest")
+         color=palette(4), linewidth=1, alpha=0.9, label="Bagging Random Forest")
 plt.plot(gradboost_df["k"][:500], gradboost_df["p@k"][:500], marker='',
          color=palette(5), linewidth=1, alpha=0.9, label="Gradient Boosting")
 plt.plot(iso_df["k"][:500], iso_df["p@k"][:500], marker='',

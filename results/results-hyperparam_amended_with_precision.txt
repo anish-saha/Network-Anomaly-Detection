@@ -1,0 +1,408 @@
+Loading labels...
+Loading graph...
+Data loaded.
+75624
+Setting training and test sets
+Extracting features for training set:
+Graph loaded
+Features were written to: /home/vhying/Network-Anomaly-Detection/data/temp/twitter_RandomForest_train.csv
+Extracting features for test set:
+Graph loaded
+Features were written to: /home/vhying/Network-Anomaly-Detection/data/temp/twitter_RandomForest_test.csv
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+[CV] n_estimators=100, min_samples_split=2, min_samples_leaf=4, max_features=sqrt, max_depth=100, bootstrap=False 
+[CV] ...
+[CV]  n_estimators=1000, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=10, bootstrap=True, total=  12.0s
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 80, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 5, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 1000, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 80, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 1000, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 10, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 800, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 4, 'min_samples_split': 10, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 1000, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 100, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 1000, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 60, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 5, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 600, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 10, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 800, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 40, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 10, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 600, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 400, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 100, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 800, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 100, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 800, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training 10-fold validation: {'accuracy': 0.9061, 'precision': 0.9030887918656896, 'recall': 0.9099999999999999, 'f1': 0.9064826817953809, 'auc': 0.9658272, 'fpr': 0.0978, 'tnr': 0.9022}
+Validate_prediction_by_links: {'accuracy': 0.8754545454545455, 'precision': 0.11458333333333333, 'recall': 0.055, 'f1': 0.07432432432432431, 'auc': 0.52616875, 'fpr': 0.0425}
+Setting training and test sets
+Extracting features for training set:
+Graph loaded
+Features were written to: /home/vhying/Network-Anomaly-Detection/data/temp/twitter_LogisticRegression_train.csv
+Extracting features for test set:
+Graph loaded
+Features were written to: /home/vhying/Network-Anomaly-Detection/data/temp/twitter_LogisticRegression_test.csv
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+[CV] n_estimators=1000, min_samples_split=2, min_samples_leaf=2, max_features=sqrt, max_depth=100, bootstrap=True 
+[CV] ...
+[CV]  n_estimators=1000, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=10, bootstrap=True, total=  12.1s
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 40, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 200, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': False, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 100, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 100, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 200, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 200, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 200, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': False, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 4, 'min_samples_split': 5, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 100, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 60, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 100, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 200, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 60, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 100, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 200, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 200, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training 10-fold validation: {'accuracy': 0.8982000000000001, 'precision': 0.8954386070369293, 'recall': 0.9018, 'f1': 0.8985805759554845, 'auc': 0.9606619999999999, 'fpr': 0.10540000000000001, 'tnr': 0.8946}
+Validate_prediction_by_links: {'accuracy': 0.8713636363636363, 'precision': 0.11214953271028037, 'recall': 0.06, 'f1': 0.0781758957654723, 'auc': 0.516415, 'fpr': 0.0475}
+Setting training and test sets
+Extracting features for training set:
+Graph loaded
+Features were written to: /home/vhying/Network-Anomaly-Detection/data/temp/twitter_Adaboost_train.csv
+Extracting features for test set:
+Graph loaded
+Features were written to: /home/vhying/Network-Anomaly-Detection/data/temp/twitter_Adaboost_test.csv
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+[CV] n_estimators=100, min_samples_split=2, min_samples_leaf=4, max_features=sqrt, max_depth=100, bootstrap=False 
+[CV] ...
+[CV]  n_estimators=1000, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=10, bootstrap=True, total=  12.8s
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 5, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 100, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 80, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 10, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 400, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 100, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 5, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 400, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 60, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 10, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 1000, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 60, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 10, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 1000, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 100, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 4, 'min_samples_split': 5, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 400, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 100, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 5, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 400, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 60, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 4, 'min_samples_split': 10, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 200, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 100, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 5, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 400, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 60, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 4, 'min_samples_split': 10, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 200, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 100, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 1000, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training 10-fold validation: {'accuracy': 0.9032, 'precision': 0.8974270665303532, 'recall': 0.9106, 'f1': 0.9038727026465072, 'auc': 0.9643719999999998, 'fpr': 0.1042, 'tnr': 0.8958}
+Validate_prediction_by_links: {'accuracy': 0.8786363636363637, 'precision': 0.10588235294117647, 'recall': 0.045, 'f1': 0.06315789473684211, 'auc': 0.5576625, 'fpr': 0.038}
+Setting training and test sets
+Extracting features for training set:
+Graph loaded
+Features were written to: /home/vhying/Network-Anomaly-Detection/data/temp/twitter_Bagging_train.csv
+Extracting features for test set:
+Graph loaded
+Features were written to: /home/vhying/Network-Anomaly-Detection/data/temp/twitter_Bagging_test.csv
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+[CV] n_estimators=100, min_samples_split=2, min_samples_leaf=4, max_features=sqrt, max_depth=100, bootstrap=False 
+[CV] ...
+[CV]  n_estimators=1000, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=10, bootstrap=True, total=  12.1s
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 80, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 5, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 1000, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 40, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 5, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 100, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 60, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 100, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 10, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 800, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 80, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 5, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 1000, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 10, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 800, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 400, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 40, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 5, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 800, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 400, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 100, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 600, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 400, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training 10-fold validation: {'accuracy': 0.8998000000000002, 'precision': 0.8992055319633169, 'recall': 0.9006000000000001, 'f1': 0.8998774011015813, 'auc': 0.9616411999999999, 'fpr': 0.101, 'tnr': 0.899}
+Validate_prediction_by_links: {'accuracy': 0.8731818181818182, 'precision': 0.07526881720430108, 'recall': 0.035, 'f1': 0.04778156996587032, 'auc': 0.49512, 'fpr': 0.043}
+Setting training and test sets
+Extracting features for training set:
+Graph loaded
+Features were written to: /home/vhying/Network-Anomaly-Detection/data/temp/twitter_RFBagging_train.csv
+Extracting features for test set:
+Graph loaded
+Features were written to: /home/vhying/Network-Anomaly-Detection/data/temp/twitter_RFBagging_test.csv
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+[CV] n_estimators=100, min_samples_split=2, min_samples_leaf=4, max_features=sqrt, max_depth=100, bootstrap=False 
+[CV] ...
+[CV]  n_estimators=1000, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=10, bootstrap=True, total=  12.1s
+
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 100, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 1000, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 60, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 4, 'min_samples_split': 10, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 200, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 80, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 5, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 1000, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 40, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 10, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 600, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 40, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 10, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 600, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 80, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 10, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 400, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 80, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 5, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 1000, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': False, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 100, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 10, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 100, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 40, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 200, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 80, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 5, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 1000, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 80, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 600, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training 10-fold validation: {'accuracy': 0.9030000000000001, 'precision': 0.9028651906544563, 'recall': 0.9036, 'f1': 0.9030804883852224, 'auc': 0.96512, 'fpr': 0.09759999999999999, 'tnr': 0.9024000000000001}
+Validate_prediction_by_links: {'accuracy': 0.8736363636363637, 'precision': 0.07608695652173914, 'recall': 0.035, 'f1': 0.04794520547945206, 'auc': 0.5145474999999999, 'fpr': 0.0425}
+Setting training and test sets
+Extracting features for training set:
+Graph loaded
+Features were written to: /home/vhying/Network-Anomaly-Detection/data/temp/twitter_GradientBoosting_train.csv
+Extracting features for test set:
+Graph loaded
+Features were written to: /home/vhying/Network-Anomaly-Detection/data/temp/twitter_GradientBoosting_test.csv
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+[CV] n_estimators=200, min_samples_split=5, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=False 
+[CV] ...
+[CV]  n_estimators=1000, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=10, bootstrap=True, total=  11.5s
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 40, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 1000, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': False, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 80, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 200, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 80, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 5, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 1000, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 40, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 5, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 800, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 100, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 600, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 80, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 5, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 1000, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 5, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 100, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 60, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 100, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 10, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 200, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 40, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 1000, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 5, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 100, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training 10-fold validation: {'accuracy': 0.8994000000000002, 'precision': 0.8979482536899551, 'recall': 0.9014, 'f1': 0.8996073592129905, 'auc': 0.9632506000000001, 'fpr': 0.1026, 'tnr': 0.8974}
+Validate_prediction_by_links: {'accuracy': 0.8686363636363637, 'precision': 0.08411214953271028, 'recall': 0.045, 'f1': 0.05863192182410423, 'auc': 0.50714, 'fpr': 0.049}
+Setting training and test sets
+Extracting features for training set:
+Graph loaded
+Features were written to: /home/vhying/Network-Anomaly-Detection/data/temp/twitter_IsolationForest_train.csv
+Extracting features for test set:
+Graph loaded
+Features were written to: /home/vhying/Network-Anomaly-Detection/data/temp/twitter_IsolationForest_test.csv
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+[CV] n_estimators=100, min_samples_split=2, min_samples_leaf=4, max_features=sqrt, max_depth=100, bootstrap=False 
+[CV] ...
+[CV]  n_estimators=100, min_samples_split=2, min_samples_leaf=1, max_features=auto, max_depth=10, bootstrap=False, total=   3.8s{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 80, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 5, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 1000, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 5, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 100, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 5, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 100, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 200, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 40, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 200, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 100, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 1000, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 40, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 200, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 100, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 5, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 400, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 100, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 4, 'min_samples_split': 5, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 400, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 60, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 4, 'min_samples_split': 10, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 200, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training classifier...
+Fitting 2 folds for each of 90 candidates, totalling 180 fits
+{'bootstrap': True, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 2, 'min_samples_split': 10, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 600, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Training 10-fold validation: {'accuracy': 0.8982000000000001, 'precision': 0.8956426433991576, 'recall': 0.9014, 'f1': 0.8984272744401427, 'auc': 0.9604469999999999, 'fpr': 0.10500000000000001, 'tnr': 0.8949999999999999}
+Validate_prediction_by_links: {'accuracy': 0.8809090909090909, 'precision': 0.09210526315789473, 'recall': 0.035, 'f1': 0.05072463768115943, 'auc': 0.5123800000000001, 'fpr': 0.0345}
+PRECISION AT K
+Random Forest:
+       k  p@k
+401    1  0.0
+2195   2  0.0
+2179   3  0.0
+1545   4  0.0
+110    5  0.0
+1031   6  0.0
+950    7  0.0
+1884   8  0.0
+1416   9  0.0
+1377  10  0.1
+Logistic Regression:
+       k       p@k
+1551   1  0.000000
+989    2  0.000000
+1410   3  0.000000
+342    4  0.000000
+1874   5  0.000000
+2182   6  0.166667
+158    7  0.142857
+1626   8  0.125000
+233    9  0.111111
+855   10  0.100000
+Adaboost:
+       k       p@k
+2094   1  0.000000
+2159   2  0.500000
+1091   3  0.666667
+163    4  0.750000
+1049   5  0.600000
+1058   6  0.500000
+1367   7  0.428571
+399    8  0.375000
+30     9  0.333333
+2148  10  0.300000
+Bagging:
+       k  p@k
+155    1  0.0
+2116   2  0.0
+475    3  0.0
+172    4  0.0
+267    5  0.0
+1766   6  0.0
+497    7  0.0
+1866   8  0.0
+1293   9  0.0
+1218  10  0.0
+Bagging Random Forest:
+       k       p@k
+1814   1  0.000000
+1407   2  0.000000
+560    3  0.000000
+481    4  0.000000
+1068   5  0.200000
+2194   6  0.166667
+411    7  0.142857
+1364   8  0.125000
+1040   9  0.111111
+1566  10  0.100000
+Gradient Boosting:
+       k       p@k
+2147   1  1.000000
+1979   2  0.500000
+1144   3  0.333333
+1381   4  0.500000
+1864   5  0.400000
+1614   6  0.333333
+854    7  0.285714
+169    8  0.250000
+152    9  0.222222
+798   10  0.200000
+Isolation Forest:
+       k  p@k
+964    1  0.0
+1958   2  0.0
+330    3  0.0
+1963   4  0.0
+2112   5  0.0
+1874   6  0.0
+1200   7  0.0
+2195   8  0.0
+1613   9  0.0
+479   10  0.0
+
+[CV] n_estimators=1000, min_samples_split=2, min_samples_leaf=4, max_features=auto, max_depth=60, bootstrap=True 
+[CV] ...
+[CV]  n_estimators=1000, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=10, bootstrap=True, total=  12.6s
