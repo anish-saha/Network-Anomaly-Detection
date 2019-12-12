@@ -66,9 +66,9 @@ def load_data(path="../data/twitter/", dataset="twitter"):
     # train size: 1 - 60,000
     # validation size: 60,001 - 67,500
     # test size: 67,5001 - 75,000
-    idx_train = range(0, 20000)
-    idx_val = range(50000, 60000)
-    idx_test = range(60000, 70000)
+    idx_train = range(0, 60000)
+    idx_val = range(60000, 67500)
+    idx_test = range(67500, 75000)
 
     idx_train = torch.LongTensor(idx_train)
     idx_val = torch.LongTensor(idx_val)

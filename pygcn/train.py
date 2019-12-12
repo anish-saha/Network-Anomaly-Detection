@@ -72,7 +72,7 @@ def train(epoch):
 
     print('###### Epoch: {:04d} ######'.format(epoch+1))
     print('Training: Loss={:04f} Accuracy={:04f}'.format(loss_train.item(),acc_train.item()))
-    print('Training: Confusion Matrix(tn,fp,fn,tp)=', confusion_matrix)
+    #print('Training: Confusion Matrix(tn,fp,fn,tp)=', confusion_matrix)
 
     if not args.fastmode:
         # Evaluate validation set performance separately,
@@ -83,7 +83,7 @@ def train(epoch):
     loss_val = F.nll_loss(output[idx_val], labels[idx_val])
     acc_val, confusion_matrix = accuracy(output[idx_val], labels[idx_val])
     print('Validation: Loss={:04f} Accuracy={:04f}'.format(loss_val.item(),acc_val.item()))
-    print('Validation: Confusion Matrix(tn,fp,fn,tp)=', confusion_matrix)
+    #print('Validation: Confusion Matrix(tn,fp,fn,tp)=', confusion_matrix)
 
 def test():
     model.eval()
@@ -94,7 +94,7 @@ def test():
         print("====================Test set results====================")
         print("Loss= {:.4f}".format(loss_test.item()),
             "Accuracy= {:.4f}".format(acc_test.item()))
-        print('Confusion Matrix (tn, fp, fn, tp)=', confusion_matrix)
+        #print('Confusion Matrix (tn, fp, fn, tp)=', confusion_matrix)
 
 
 # Train model
