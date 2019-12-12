@@ -58,9 +58,9 @@ def load_data(path="../data/twitter/", dataset="twitter"):
     labels = torch.LongTensor(np.where(labels)[1])
     adj = torch.FloatTensor(np.array(adj.todense()))
 
-    idx_train = list(range(0, 3000))
-    idx_val = list(range(3000, 3900))
-    idx_test = list(range(4000, 4900))
+    idx_train = list(range(0, 4000))
+    idx_val = list(range(4000, 4500))
+    idx_test = list(range(4500, 5000))
 
     np.random.shuffle(idx_train)
     np.random.shuffle(idx_val)
