@@ -24,6 +24,7 @@ else:
     meta_data_cols = ["dst", "src", "number_of_friends_u", "number_of_friends_v"]
 
 twitter_config._name = "twitter_" + "RandomForest"
+print(twitter_config._name + ":")
 learner = SkLearner(labels=labels)
 glc = GraphLearningController(learner, twitter_config)
 rf_result_path = os.path.join(output_folder, twitter_config.name  + "_res.csv")
@@ -34,6 +35,7 @@ glc.classify_by_links(twitter_graph,
                       meta_data_cols=meta_data_cols)
 
 twitter_config._name = "twitter_" + "LogisticRegression"
+print(twitter_config._name + ":")
 learner = SkLearner(labels=labels).set_logistic_regression_classifier()
 glc = GraphLearningController(learner, twitter_config)
 lr_result_path = os.path.join(output_folder, twitter_config.name  + "_res.csv")
@@ -45,6 +47,7 @@ glc.classify_by_links(twitter_graph,
 
 
 twitter_config._name = "twitter_" + "Adaboost"
+print(twitter_config._name + ":")
 learner = SkLearner(labels=labels).set_adaboost_classifier()
 glc = GraphLearningController(learner, twitter_config)
 adaboost_result_path = os.path.join(output_folder, twitter_config.name  + "_res.csv")
@@ -56,6 +59,7 @@ glc.classify_by_links(twitter_graph,
 
 
 twitter_config._name = "twitter_" + "Bagging"
+print(twitter_config._name + ":")
 learner = SkLearner(labels=labels).set_bagging_classifier()
 glc = GraphLearningController(learner, twitter_config)
 bagging_result_path = os.path.join(output_folder, twitter_config.name  + "_res.csv")
@@ -67,6 +71,7 @@ glc.classify_by_links(twitter_graph,
 
 
 twitter_config._name = "twitter_" + "RFBagging"
+print(twitter_config._name + ":")
 learner = SkLearner(labels=labels).set_rf_bagging_classifier()
 glc = GraphLearningController(learner, twitter_config)
 baggingRF_result_path = os.path.join(output_folder, twitter_config.name  + "_res.csv")
@@ -78,6 +83,7 @@ glc.classify_by_links(twitter_graph,
 
 
 twitter_config._name = "twitter_" + "GradientBoosting"
+print(twitter_config._name + ":")
 learner = SkLearner(labels=labels).set_gradient_boosting_classifier()
 glc = GraphLearningController(learner, twitter_config)
 gradboost_result_path = os.path.join(output_folder, twitter_config.name  + "_res.csv")
@@ -89,6 +95,7 @@ glc.classify_by_links(twitter_graph,
 
 
 twitter_config._name = "twitter_" + "IsolationForest"
+print(twitter_config._name + ":")
 learner = SkLearner(labels=labels).set_isolation_forest_classifier()
 glc = GraphLearningController(learner, twitter_config)
 iso_result_path = os.path.join(output_folder, twitter_config.name  + "_res.csv")
@@ -155,6 +162,7 @@ print("Isolation Forest:")
 print(iso_df[["k", "p@k"]].head(10))
 
 
+"""
 import matplotlib.pyplot as plt
 
 plt.style.use('seaborn-darkgrid')
@@ -182,3 +190,4 @@ plt.xlabel("k", fontsize=14, fontweight=2)
 plt.ylabel("precision @ k", fontsize=14, fontweight=2)
 
 plt.savefig('precision_at_k.png')
+"""
