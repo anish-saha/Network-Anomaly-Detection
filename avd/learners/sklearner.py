@@ -150,11 +150,11 @@ class SkLearner(AbstractLearner):
     
     def train_classifier(self, dataset):
         # RandomizedSearchCV to optimize parameters
-        self._classifier = self.optimize_hyperparameters()
+        #self._classifier = self.optimize_hyperparameters()
         # Train classifier on dataset
         print("Training classifier...")
-        self._classifier = self._classifier.fit(dataset.features, dataset.labels).best_estimator_
-        print(self._classifier.get_params())
+        self._classifier = self._classifier.fit(dataset.features, dataset.labels)#.best_estimator_
+        #print(self._classifier.get_params())
         return self
 
     def get_prediction(self, prediction_data):

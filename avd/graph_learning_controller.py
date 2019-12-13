@@ -68,8 +68,8 @@ class GraphLearningController:
         if not (utils.is_valid_path(self._train_path) and utils.is_valid_path(self._test_path)):
             gs = GraphSampler(
                 my_graph, self._config.vertex_min_edge_number, self._config.vertex_max_edge_number)
-            if self._labels_path:
-                my_graph.write_nodes_labels(self._labels_path)
+            #if self._labels_path:
+            #    my_graph.write_nodes_labels(self._labels_path)
             training_set, test_set = gs.split_training_test_set(
                 training_size, test_size)
 
@@ -148,7 +148,7 @@ class GraphLearningController:
         # Output
         classified = self._ml._learner.merge_with_labels(
             classified, self._labels_path)
-        if isinstance(classified, DataFrame):
-            classified.to_csv(results_output_path)
+        #if isinstance(classified, DataFrame):
+        #    classified.to_csv(results_output_path)
 
         print("Validate_prediction_by_links: {}".format(self._ml.validate_prediction_by_links(classified)))
