@@ -98,16 +98,3 @@ def accuracy(output, labels):
     acc = correct / len(labels)
     confusion_m = confusion_matrix(labels, preds).ravel()
     return (acc, confusion_m)
-
-def accuracy_tw(output, labels):
-    preds = output.max(1)[1].type_as(labels)
-    correct = preds.eq(labels).double()
-    correct = correct.sum()
-    print("total labels:", len(labels))
-    print("total preds:", len(preds))
-    tn, fp, fn, tp = confusion_matrix(labels, preds).ravel()
-    print("confusion matrix (tn,fp,fn,tp):", tn, fp, fn, tp)
-    print("Accuracy:", correct / len(labels))
-    print("Precision:", tp/(tp+fp))
-    print("Recall:", tp / (tp + fn))
-    return correct / len(labels)
