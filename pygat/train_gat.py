@@ -13,8 +13,8 @@ import torch.nn.functional as F
 import torch.optim as optim
 from torch.autograd import Variable
 
-from utils import load_data, accuracy
-from models import GAT, SpGAT
+from pygat.utils import load_data, accuracy
+from pygat.models import GAT, SpGAT
 
 #
 # python train.py --hidden 8 --epochs 100 --sparse
