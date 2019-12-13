@@ -1,0 +1,409 @@
+vhying@cs221-vm-vm:~/Network-Anomaly-Detection/pygat$ python3 train.py --sparse
+Loading twitter dataset...
+edges shape: (41697, 2)
+###### Epoch: 0001 ######
+Training: Loss=0.849603 Accuracy=0.330500
+Validation: Loss=0.570966 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0002 ######
+Training: Loss=0.764237 Accuracy=0.423500
+Validation: Loss=0.506884 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0003 ######
+Training: Loss=0.701039 Accuracy=0.521750
+Validation: Loss=0.452671 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0004 ######
+Training: Loss=0.669293 Accuracy=0.542250
+Validation: Loss=0.408059 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0005 ######
+Training: Loss=0.632806 Accuracy=0.534250
+Validation: Loss=0.371882 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0006 ######
+Training: Loss=0.611421 Accuracy=0.589000
+Validation: Loss=0.343077 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0007 ######
+Training: Loss=0.577861 Accuracy=0.618500
+Validation: Loss=0.319829 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0008 ######
+Training: Loss=0.576768 Accuracy=0.606500
+Validation: Loss=0.301197 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0009 ######
+Training: Loss=0.546850 Accuracy=0.638250
+Validation: Loss=0.286499 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0010 ######
+Training: Loss=0.488683 Accuracy=0.659250
+Validation: Loss=0.275029 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0011 ######
+Training: Loss=0.499506 Accuracy=0.654250
+Validation: Loss=0.265991 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0012 ######
+Training: Loss=0.460582 Accuracy=0.662500
+Validation: Loss=0.259022 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0013 ######
+Training: Loss=0.483007 Accuracy=0.652000
+Validation: Loss=0.253540 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0014 ######
+Training: Loss=0.457996 Accuracy=0.656250
+Validation: Loss=0.249268 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0015 ######
+Training: Loss=0.470097 Accuracy=0.649000
+Validation: Loss=0.245983 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0016 ######
+Training: Loss=0.450535 Accuracy=0.658750
+Validation: Loss=0.243452 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0017 ######
+Training: Loss=0.428622 Accuracy=0.667750
+Validation: Loss=0.241549 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0018 ######
+Training: Loss=0.443307 Accuracy=0.667250
+Validation: Loss=0.240167 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0019 ######
+Training: Loss=0.446875 Accuracy=0.665000
+Validation: Loss=0.239183 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0020 ######
+Training: Loss=0.455160 Accuracy=0.668500
+Validation: Loss=0.238541 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0021 ######
+Training: Loss=0.466863 Accuracy=0.656500
+Validation: Loss=0.238151 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0022 ######
+Training: Loss=0.456003 Accuracy=0.661250
+Validation: Loss=0.237923 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0023 ######
+Training: Loss=0.451398 Accuracy=0.667750
+Validation: Loss=0.237820 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0024 ######
+Training: Loss=0.448575 Accuracy=0.680250
+Validation: Loss=0.237805 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0025 ######
+Training: Loss=0.460567 Accuracy=0.663750
+Validation: Loss=0.237849 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0026 ######
+Training: Loss=0.431079 Accuracy=0.672000
+Validation: Loss=0.237934 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0027 ######
+Training: Loss=0.420117 Accuracy=0.679500
+Validation: Loss=0.238040 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0028 ######
+Training: Loss=0.427300 Accuracy=0.669000
+Validation: Loss=0.238155 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0029 ######
+Training: Loss=0.447222 Accuracy=0.669000
+Validation: Loss=0.238265 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0030 ######
+Training: Loss=0.432329 Accuracy=0.677500
+Validation: Loss=0.238366 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0031 ######
+Training: Loss=0.459312 Accuracy=0.671750
+Validation: Loss=0.238454 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0032 ######
+Training: Loss=0.439328 Accuracy=0.661000
+Validation: Loss=0.238517 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0033 ######
+Training: Loss=0.438949 Accuracy=0.673000
+Validation: Loss=0.238569 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0034 ######
+Training: Loss=0.426749 Accuracy=0.681000
+Validation: Loss=0.238593 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0035 ######
+Training: Loss=0.429154 Accuracy=0.674500
+Validation: Loss=0.238599 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0036 ######
+Training: Loss=0.408260 Accuracy=0.685250
+Validation: Loss=0.238606 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0037 ######
+Training: Loss=0.434172 Accuracy=0.672500
+Validation: Loss=0.238601 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0038 ######
+Training: Loss=0.436855 Accuracy=0.668500
+Validation: Loss=0.238591 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0039 ######
+Training: Loss=0.425121 Accuracy=0.669750
+Validation: Loss=0.238567 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0040 ######
+Training: Loss=0.438624 Accuracy=0.679250
+Validation: Loss=0.238526 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0041 ######
+Training: Loss=0.429362 Accuracy=0.686000
+Validation: Loss=0.238469 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0042 ######
+Training: Loss=0.428878 Accuracy=0.677750
+Validation: Loss=0.238389 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0043 ######
+Training: Loss=0.418142 Accuracy=0.667750
+Validation: Loss=0.238313 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0044 ######
+Training: Loss=0.427910 Accuracy=0.679250
+Validation: Loss=0.238231 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0045 ######
+Training: Loss=0.434680 Accuracy=0.678250
+Validation: Loss=0.238141 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0046 ######
+Training: Loss=0.420339 Accuracy=0.684500
+Validation: Loss=0.238054 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0047 ######
+Training: Loss=0.425154 Accuracy=0.680750
+Validation: Loss=0.237971 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0048 ######
+Training: Loss=0.423684 Accuracy=0.681250
+Validation: Loss=0.237895 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0049 ######
+Training: Loss=0.435914 Accuracy=0.679250
+Validation: Loss=0.237825 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0050 ######
+Training: Loss=0.432025 Accuracy=0.678750
+Validation: Loss=0.237761 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0051 ######
+Training: Loss=0.398056 Accuracy=0.680250
+Validation: Loss=0.237713 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0052 ######
+Training: Loss=0.436442 Accuracy=0.675250
+Validation: Loss=0.237673 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0053 ######
+Training: Loss=0.411548 Accuracy=0.685750
+Validation: Loss=0.237647 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0054 ######
+Training: Loss=0.423808 Accuracy=0.670500
+Validation: Loss=0.237631 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0055 ######
+Training: Loss=0.424323 Accuracy=0.673750
+Validation: Loss=0.237624 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0056 ######
+Training: Loss=0.425929 Accuracy=0.679500
+Validation: Loss=0.237625 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0057 ######
+Training: Loss=0.412387 Accuracy=0.688750
+Validation: Loss=0.237633 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0058 ######
+Training: Loss=0.417224 Accuracy=0.672750
+Validation: Loss=0.237644 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0059 ######
+Training: Loss=0.425097 Accuracy=0.674000
+Validation: Loss=0.237658 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0060 ######
+Training: Loss=0.422409 Accuracy=0.680750
+Validation: Loss=0.237674 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0061 ######
+Training: Loss=0.409305 Accuracy=0.686000
+Validation: Loss=0.237690 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0062 ######
+Training: Loss=0.425230 Accuracy=0.675250
+Validation: Loss=0.237713 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0063 ######
+Training: Loss=0.405481 Accuracy=0.687750
+Validation: Loss=0.237734 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0064 ######
+Training: Loss=0.407291 Accuracy=0.677750
+Validation: Loss=0.237761 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0065 ######
+Training: Loss=0.417032 Accuracy=0.682750
+Validation: Loss=0.237788 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0066 ######
+Training: Loss=0.404340 Accuracy=0.687000
+Validation: Loss=0.237810 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0067 ######
+Training: Loss=0.423007 Accuracy=0.673500
+Validation: Loss=0.237828 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0068 ######
+Training: Loss=0.416662 Accuracy=0.683250
+Validation: Loss=0.237845 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0069 ######
+Training: Loss=0.404457 Accuracy=0.687250
+Validation: Loss=0.237867 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0070 ######
+Training: Loss=0.414326 Accuracy=0.666250
+Validation: Loss=0.237881 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0071 ######
+Training: Loss=0.403245 Accuracy=0.682250
+Validation: Loss=0.237889 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0072 ######
+Training: Loss=0.418692 Accuracy=0.680000
+Validation: Loss=0.237900 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0073 ######
+Training: Loss=0.402959 Accuracy=0.681500
+Validation: Loss=0.237901 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0074 ######
+Training: Loss=0.413800 Accuracy=0.678000
+Validation: Loss=0.237896 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0075 ######
+Training: Loss=0.429309 Accuracy=0.674000
+Validation: Loss=0.237899 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0076 ######
+Training: Loss=0.417302 Accuracy=0.681750
+Validation: Loss=0.237908 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0077 ######
+Training: Loss=0.414825 Accuracy=0.683000
+Validation: Loss=0.237915 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0078 ######
+Training: Loss=0.403395 Accuracy=0.683000
+Validation: Loss=0.237909 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0079 ######
+Training: Loss=0.413978 Accuracy=0.675000
+Validation: Loss=0.237903 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0080 ######
+Training: Loss=0.403351 Accuracy=0.680250
+Validation: Loss=0.237890 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0081 ######
+Training: Loss=0.401320 Accuracy=0.695500
+Validation: Loss=0.237882 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0082 ######
+Training: Loss=0.407739 Accuracy=0.680750
+Validation: Loss=0.237877 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0083 ######
+Training: Loss=0.405157 Accuracy=0.673750
+Validation: Loss=0.237883 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0084 ######
+Training: Loss=0.409185 Accuracy=0.676750
+Validation: Loss=0.237888 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0085 ######
+Training: Loss=0.405424 Accuracy=0.682000
+Validation: Loss=0.237892 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0086 ######
+Training: Loss=0.396256 Accuracy=0.680000
+Validation: Loss=0.237902 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0087 ######
+Training: Loss=0.424556 Accuracy=0.679500
+Validation: Loss=0.237919 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0088 ######
+Training: Loss=0.400396 Accuracy=0.681000
+Validation: Loss=0.237928 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0089 ######
+Training: Loss=0.406537 Accuracy=0.682750
+Validation: Loss=0.237926 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0090 ######
+Training: Loss=0.409456 Accuracy=0.678250
+Validation: Loss=0.237922 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0091 ######
+Training: Loss=0.399578 Accuracy=0.689000
+Validation: Loss=0.237915 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0092 ######
+Training: Loss=0.417849 Accuracy=0.681500
+Validation: Loss=0.237914 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0093 ######
+Training: Loss=0.399176 Accuracy=0.681500
+Validation: Loss=0.237909 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0094 ######
+Training: Loss=0.408307 Accuracy=0.688500
+Validation: Loss=0.237907 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0095 ######
+Training: Loss=0.395909 Accuracy=0.685250
+Validation: Loss=0.237898 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0096 ######
+Training: Loss=0.410930 Accuracy=0.685250
+Validation: Loss=0.237887 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0097 ######
+Training: Loss=0.403773 Accuracy=0.680750
+Validation: Loss=0.237875 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0098 ######
+Training: Loss=0.391184 Accuracy=0.687000
+Validation: Loss=0.237852 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0099 ######
+Training: Loss=0.390221 Accuracy=0.687500
+Validation: Loss=0.237830 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+###### Epoch: 0100 ######
+Training: Loss=0.392675 Accuracy=0.682250
+Validation: Loss=0.237803 Accuracy=0.936000
+Validation: Confusion Matrix(tn,fp,fn,tp)= [468   0  32   0]
+Optimization Finished!
+Total time elapsed: 228.1172s
+Loading 54th epoch
+==========Test set results==========
+Loss= 0.1850 Accuracy= 0.9560
+Confusion Matrix (tn, fp, fn, tp)= [478   0  22   0]
