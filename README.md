@@ -7,7 +7,6 @@ CodaLab Worksheet: https://worksheets.codalab.org/worksheets/0xb972380293b449d89
 
 In this project, we try to construct a robust prediction algorithm to predict whether or not a social network user is a Sybil (fake account) using artificial intelligence. Our original dataset is a network dataset of over 5.3 million Twitter users.
 
-![Graph](https://github.com/anish-saha/Network-Anomaly-Detection/blob/master/figures/graph.png | width=400)
 
 ## Models
 
