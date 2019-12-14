@@ -12,7 +12,7 @@ In this project, we try to construct a robust prediction algorithm to predict wh
 
 Three models were used to perform node classification:
 * A two-step link prediction/aggregation pipeline
-![TwoStage](https://github.com/anish-saha/Network-Anomaly-Detection/blob/master/figures/Link_Prediction_Classifier.png)
+![Two](https://github.com/anish-saha/Network-Anomaly-Detection/blob/master/figures/Link_Prediction_Classifier.png)
 
 * Graph Convolutional Network (GCN)
 ![GCN](https://github.com/anish-saha/Network-Anomaly-Detection/blob/master/figures/gcn.png)
