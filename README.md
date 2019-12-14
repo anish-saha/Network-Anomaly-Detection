@@ -5,21 +5,21 @@ Final Report: https://github.com/anish-saha/Network-Anomaly-Detection/blob/maste
 
 CodaLab Worksheet: https://worksheets.codalab.org/worksheets/0xb972380293b449d896f3c0ade600ee05
 
-In this project, we try to construct a robust prediction algorithm to predict whether or not a social network user is a Sybil (fake account) using artificial intelligence. Our original dataset is a network dataset of over 5.3 million Twitter users. 
+In this project, we try to construct a robust prediction algorithm to predict whether or not a social network user is a Sybil (fake account) using artificial intelligence. Our original dataset is a network dataset of over 5.3 million Twitter users.
 
-![Graph](https://github.com/anish-saha/Network-Anomaly-Detection/blob/master/figures/graph.png =200x)
+![Graph](https://github.com/anish-saha/Network-Anomaly-Detection/blob/master/figures/graph.png | width=400)
 
 ## Models
 
-Three models were used to perform node classification: 
-* A two-step link prediction/aggregation pipeline 
-![TwoStage](https://github.com/anish-saha/Network-Anomaly-Detection/blob/master/figures/Link_Prediction_Classifier.png =200x)
+Three models were used to perform node classification:
+* A two-step link prediction/aggregation pipeline
+![TwoStage](https://github.com/anish-saha/Network-Anomaly-Detection/blob/master/figures/Link_Prediction_Classifier.png | width=400)
 
-* Graph Convolutional Network (GCN) 
-![GCN](https://github.com/anish-saha/Network-Anomaly-Detection/blob/master/figures/gcn.png =200x)
+* Graph Convolutional Network (GCN)
+![GCN](https://github.com/anish-saha/Network-Anomaly-Detection/blob/master/figures/gcn.png | width=400)
 
 * Graph Attention Networks (GAT)
-![GAT](https://github.com/anish-saha/Network-Anomaly-Detection/blob/master/figures/gat.png =200x)
+![GAT](https://github.com/anish-saha/Network-Anomaly-Detection/blob/master/figures/gat.png | width=400)
 
 ## Setup
 pip3 install --user -r requirements.txt
@@ -27,7 +27,7 @@ pip3 install --user -r requirements.txt
 ## Usage
 
 ### Two-stage Classifier
-python3 eda.py 
+python3 eda.py
 
 python3 sybil_detect.py
 
