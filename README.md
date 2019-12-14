@@ -12,13 +12,13 @@ In this project, we try to construct a robust prediction algorithm to predict wh
 
 Three models were used to perform node classification:
 * A two-step link prediction/aggregation pipeline
-![TwoStage](https://github.com/anish-saha/Network-Anomaly-Detection/blob/master/figures/Link_Prediction_Classifier.png | width=400)
+![TwoStage](https://github.com/anish-saha/Network-Anomaly-Detection/blob/master/figures/Link_Prediction_Classifier.png)
 
 * Graph Convolutional Network (GCN)
-![GCN](https://github.com/anish-saha/Network-Anomaly-Detection/blob/master/figures/gcn.png | width=400)
+![GCN](https://github.com/anish-saha/Network-Anomaly-Detection/blob/master/figures/gcn.png)
 
 * Graph Attention Networks (GAT)
-![GAT](https://github.com/anish-saha/Network-Anomaly-Detection/blob/master/figures/gat.png | width=400)
+![GAT](https://github.com/anish-saha/Network-Anomaly-Detection/blob/master/figures/gat.png)
 
 ## Setup
 pip3 install --user -r requirements.txt
