@@ -2,3 +2,29 @@
 Final Project for CS221 - Detecting anomalous vertices within a large, directed graph dataset representing a network of users on Twitter
 
 Final Report: https://github.com/anish-saha/Network-Anomaly-Detection/blob/master/CS_221_Project_Report.pdf
+
+In this project, we try to construct a robust prediction algorithm to predict whether or not a social network user is a Sybil (fake account) using artificial intelligence. Our original dataset is a network dataset of over 5.3 million Twitter users. 
+
+## Models
+
+Three models were used to perform node classification: 
+* A two-step link prediction/aggregation pipeline 
+* Graph Convolutional Network (GCN) 
+* Graph Attention Networks (GAT)
+
+## Setup
+pip3 install --user -r requirements.txt
+
+## Usage
+
+### Two-stage Classifier
+python3 eda.py 
+python3 sybil_detect.py
+
+### GCN
+cd pygcn/
+python3 train.py
+
+### GAT
+cd pygat/
+python3 train.py --sparse
